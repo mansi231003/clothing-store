@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+</head>
+
+<body>
+    <div class="flex-column-content-center homepage-container">
+        <div class="sidebar-container" id="container">
+
+            <ul class="sidebar-menu">
+
+                <li style="text-align: right;" class="menu-item"><button class="sidebar-toggler button2"><i
+                            class="fa-solid fa-xmark"></i></button></li>
+
+                <li id="button" class="menu-item dropdown" data-target="menu1"><a class="nav-link" href="#">Shop
+                    </a><i class="fa-solid fa-caret-down arrow"></i></li>
+
+                <li class="sub-menu" data-target="menu1" id="pages">
+                    <ul class="sidebar-menu">
+                        <li class="menu-item"><a class="nav-link" href="#">Category1</a></li>
+                        <li class="menu-item"><a class="nav-link" href="#">Category2</a></li>
+                        <li class="menu-item"><a class="nav-link" href="#">Category3</a></li>
+
+                    </ul>
+                </li>
+
+                <li class="menu-item"><a class="nav-link" href="#">On Sale</a></li>
+
+                <li class="menu-item"><a class="nav-link" href="#">New Arrivals</a></li>
+
+
+                <li class="menu-item"><a class="nav-link" href="#">Brands</a></li>
+
+            </ul>
+            <div class="sidebar-overlay sidebar-toggler"></div>
+
+        </div>
+
+
+
+
+        <div class="announcement flex-content-center">
+            <div class="announcement-text-wrap flex-content-center">Sign up and get 20% off to your first order.
+                <div class="announcement-text">Sign Up Now</div>
+            </div>
+            <div class="icon"><i class="fa-solid fa-xmark"></i></div>
+        </div>
+
+        <div class="navbar-container flex-content-center">
+
+
+
+            <div class="shop">
+                <div class="side-button">
+                    <button class="sidebar-toggler"><i class="fa-solid fa-bars"></i></button>
+                </div>
+                SHOP.CO
+            </div>
+            <div class="navmenu-container">
+                <ul class="navbar-menu flex-content-center">
+
+                    <li class="nav-item dropdown" data-target="menu1"><a class="nav-link" href="#">Shop <i
+                                class="fa fa-angle-down "></i></a>
+                        <ul class="sub-menu" data-target="menu1">
+                            <li class="sub-menu-item"><a class="sub-menu-link" href="#">Category1</a></li>
+                            <li class="sub-menu-item"><a class="sub-menu-link" href="#">Category2</a></li>
+                            <li class="sub-menu-item"><a class="sub-menu-link" href="#">Category3</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#">On Sale</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">New Arrivals</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Brands</a></li>
+                </ul>
+            </div>
+
+            <div class="search-container flex-content-center">
+                <div class="search-bar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input class="search" type="text" id="search" placeholder=" Search for products">
+                </div>
+
+                <div class="icons">
+                    <span class="material-symbols-outlined">
+                        shopping_cart
+                    </span>
+                    <span class="material-symbols-outlined">
+                        account_circle
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="hero-section flex-content-center">
+            <div class="left-container">
+                <div class="heading-container">
+                    <h1 class="heading">FIND CLOTHES THAT MATCHES YOUR STYLE</h1>
+                </div>
+                <div class="para-container">
+                    <p>Browse through our diverse range of meticulously crafted garments, designed to bring out your
+                        individuality and cater to your sense of style.</p>
+                </div>
+                <div class="button flex-content-center">Shop Now</div>
+                <div class="ratings-container">
+                    <div class="left">
+                        <div class="rating-section">
+                            <h4 class="rating-number">200+</h4>
+                            International Brands
+                        </div>
+                        <div class="rating-section">
+                            <h4 class="rating-number">2,000+</h4>
+                            High-Quality Products
+                        </div>
+
+                    </div>
+                    <div class="right">
+                        <div class="rating-section">
+                            <h4 class="rating-number">30,000+</h4>
+                            Happy Customers
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="image-container">
+
+                <img class="vector" src="static/image/Vector.png" />
+                <img class="image" src="static/image/image.jpg" />
+                <img class="vector2" src="static/image/Vector.png" />
+
+            </div>
+
+        </div>
+
+        <div class="brands-container flex-content-center">
+            <div class="left">
+                <img class="brand" src="static/image/versace.png" />
+                <img class="zara" src="static/image/zara-logo-1 1 (1).png" />
+                <img class="brand" src="static/image/gucci-logo-1 1 (1).png" />
+            </div>
+            <div class="right">
+                <img class="brand" src="static/image/prada-logo-1 1.png" />
+                <img class="brand" src="static/image/Group (1).png" />
+            </div>
+        </div>
+
+        <div class="cloths-section flex-column-content-center border-bottom">
+            <h1 class="heading">NEW ARRIVALS</h1>
+
+            <div  class="cloth-item-wrapper swiper mySwiper1">
+
+             <div id="new-arrival" class="swiper-wrapper">
+
+                <!-- <div class="cloth-item swiper-slide">
+                    <div class="image-container"><img class="image" src="static/image/black-tshirt.png" /></div>
+                    <div>
+                        <h5>T-shirt with Tape Details</h5>
+                    </div>
+                    <div class="stars-container">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half"></i>
+                        </div>
+                        <div class="rating">4.5/<p class="grey-color">5</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h5 class="font-size">$120</h5>
+                    </div>
+                </div>
+
+                <div class="cloth-item swiper-slide">
+                    <div class="image-container"><img class="image" src="static/image/jean.png" /></div>
+                    <div>
+                        <h5>Skinny Fit Jeans</h5>
+                    </div>
+                    <div class="stars-container">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half"></i>
+                        </div>
+                        <div class="rating">3.5/<p class="grey-color">5</p>
+                        </div>
+                    </div>
+                    <div class="price">
+                        <h5 class="font-size">$240</h5>
+                        <h5 class="grey-color font-size"><s>$260</s></h5>
+                        <div class="discount flex-content-center">-20%</div>
+                    </div>
+                </div>
+
+                <div class="cloth-item swiper-slide">
+                    <div class="image-container"><img class="image" src="static/image/check shirt.png" /></div>
+                    <div>
+                        <h5>Checkered Shirt</h5>
+                    </div>
+                    <div class="stars-container">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half"></i>
+                        </div>
+                        <div class="rating">4.5/<p class="grey-color">5</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h5 class="font-size">$180</h5>
+                    </div>
+                </div>
+
+                <div class="cloth-item swiper-slide">
+                    <div class="image-container"><img class="image" src="static/image/orange shirt.png" /></div>
+                    <div>
+                        <h5>Sleeve Striped T-shirt</h5>
+                    </div>
+                    <div class="stars-container">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half"></i>
+                        </div>
+                        <div class="rating">4.5/<p class="grey-color">5</p>
+                        </div>
+                    </div>
+                    <div class="price">
+                        <h5 class="font-size">$130</h5>
+                        <h5 class="grey-color font-size"><s>$160</s></h5>
+                        <div class="discount flex-content-center">-30%</div>
+                    </div>
+                </div> -->
+            </div>
+            
+            </div>
+            <div class="button flex-content-center">View All</div>
+
+        </div>
+
+         <div class="cloths-section flex-column-content-center">
+            <h1 class="heading">TOP SELLINGS</h1>
+
+            <div class="cloth-item-wrapper swiper mySwiper1 ">
+                <div id="top-selling" class="swiper-wrapper">
+
+                <!-- <div class="cloth-item swiper-slide">
+                    <div class="image-container"><img class="image" src="static/image/striped shirt.png" /></div>
+                    <div>
+                        <h5>Vertical Striped Shirt</h5>
+                    </div>
+                    <div class="stars-container">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="rating">5.0/<p class="grey-color">5</p>
+                        </div>
+                    </div>
+                    <div class="price">
+                        <h5 class="font-size">$212</h5>
+                        <h5 class="grey-color font-size"><s>$232</s></h5>
+                        <div class="discount flex-content-center">-20%</div>
+                    </div>
+                </div>
+
+                <div class="cloth-item swiper-slide">
+                    <div class="image-container"><img class="image" src="static/image/courage tshirt.png" /></div>
+                    <div>
+                        <h5>Courage Graphic T-Shirt</h5>
+                    </div>
+                    <div class="stars-container">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="rating">4.0/<p class="grey-color">5</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h5 class="font-size">$145</h5>
+                    </div>
+                </div>
+
+                <div class="cloth-item swiper-slide">
+                    <div class="image-container"><img class="image" src="static/image/shorts.png" /></div>
+                    <div>
+                        <h5>Loose Fit Bermuda Shorts</h5>
+                    </div>
+                    <div class="stars-container">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="rating">3.0/<p class="grey-color">5</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h5 class="font-size">$80</h5>
+                    </div>
+                </div>
+
+                <div class="cloth-item swiper-slide">
+                    <div class="image-container"><img class="image" src="static/image/black jean.png" /></div>
+                    <div>
+                        <h5>Faded Skinny Jeans</h5>
+                    </div>
+                    <div class="stars-container">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half"></i>
+                        </div>
+                        <div class="rating">4.5/<p class="grey-color">5</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h5 class="font-size">$210</h5>
+                    </div>
+                </div> -->
+            </div>
+            </div>
+            <div class="button flex-content-center">View All</div>
+        </div>
+
+        <div class="dress-style-section flex-column-content-center">
+            <h1 class="heading">BROWSE BY DRESS STYLE</h1>
+            <div class="image-wrap">
+                <div class="square-img">
+                    <img class="image" src="static/image/casual.png" />
+                    <h3 class="img-name">Casual</h3>
+                </div>
+                <div class="rectangle-img">
+                    <img class="image" src="static/image/formal.png" />
+                    <h3 class="img-name">Formal</h3>
+                </div>
+            </div>
+            <div class="image-wrap">
+                <div class="rectangle-img">
+                    <img class="image" src="static/image/party.png" />
+                    <h3 class="img-name">Party</h3>
+                </div>
+                <div class="square-img">
+                    <img class="image" src="static/image/gym.png" />
+                    <h3 class="img-name">Gym</h3>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="customers-feedback-container">
+            <div class="heading-container">
+                <h1 class="heading">OUR HAPPY CUSTOMERS</h1>
+                <div class="slide-buttons">
+                    <i class="fa-solid fa-arrow-left prev-btn"></i>
+                    <i class="fa-solid fa-arrow-right next-btn"></i>
+                </div>
+            </div>
+
+            <div class="flexx">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="customer-feedback swiper-slide">
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="customer-name">
+                                <h4>Sarah M.</h4>
+                                <i class="fa-solid fa-circle-check tick"></i>
+                            </div>
+                            <div class="description">
+                                <p class="description-para">"I'm blown away by the quality and style of the clothes I
+                                    received from Shop.co. From casual wear
+                                    to elegant dresses, every piece I've bought has exceeded my expectations.”</p>
+                            </div>
+                        </div>
+
+                        <div class="customer-feedback swiper-slide">
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="customer-name">
+                                <h4>Alex K.</h4>
+                                <i class="fa-solid fa-circle-check tick"></i>
+                            </div>
+                            <div class="description">
+                                <p class="description-para">"Finding clothes that align with my personal style used to
+                                    be a
+                                    challenge until I discovered
+                                    Shop.co. The range of options they offer is truly remarkable, catering to a variety
+                                    of
+                                    tastes
+                                    and occasions.”</p>
+                            </div>
+                        </div>
+
+                        <div class="customer-feedback swiper-slide">
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="customer-name">
+                                <h4>James L.</h4>
+                                <i class="fa-solid fa-circle-check tick"></i>
+                            </div>
+                            <div class="description">
+                                <p class="description-para">"As someone who's always on the lookout for unique fashion
+                                    pieces, I'm thrilled to have stumbled upon Shop.co. The selection of clothes is not
+                                    only
+                                    diverse but also on-point with the latest trends.”</p>
+                            </div>
+                        </div>
+
+                        <div class="customer-feedback swiper-slide">
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="customer-name">
+                                <h4>Moon M.</h4>
+                                <i class="fa-solid fa-circle-check tick"></i>
+                            </div>
+                            <div class="description">
+                                <p class="description-para">"I'm blown away by the quality and style of the clothes I
+                                    received from Shop.co. From casual wear
+                                    to elegant dresses, every piece I've bought has exceeded my expectations.”</p>
+                            </div>
+                        </div>
+
+                        <div class="customer-feedback swiper-slide">
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="customer-name">
+                                <h4>Mooen M.</h4>
+                                <i class="fa-solid fa-circle-check tick"></i>
+                            </div>
+                            <div class="description">
+                                <p class="description-para">"I'm blown away by the quality and style of the clothes I
+                                    received from Shop.co. From casual wear
+                                    to elegant dresses, every piece I've bought has exceeded my expectations.”</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <div class="section-detail flex-column-content-center">
+
+            <div class="offers-section flex-content-center">
+                <div class="wrap">
+                    <div class="heading-container">
+                        <h1 class="heading">STAY UPTO DATE ABOUT OUR LATEST OFFERS</h1>
+                    </div>
+                    <div class="buttons-container">
+                        <div class="button flex-content-center email">
+                            <i class="fa-regular fa-envelope"></i>
+                            <input class="email-box" type="text" id="search" placeholder="Enter your email address">
+                        </div>
+                        <div class="button flex-content-center">Subscribe to Newsletter</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+
+                <div class="description">
+                    <div class="shop">SHOP.CO</div>
+                    <div class="para">We have clothes that suits your style and which you’re proud to wear. From women
+                        to men.</div>
+                    <div class="social-media-icons-wrap">
+                        <a class="social-media-icon flex-content-center" href="#"><i
+                                class="fa-brands fa-twitter"></i></a>
+                        <a class="social-media-icon flex-content-center" href="#"><i
+                                class="fa-brands fa-facebook"></i></a>
+                        <a class="social-media-icon flex-content-center" href="#"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a class="social-media-icon flex-content-center" href="#"><i
+                                class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+
+                <div class="company-help-wrap">
+
+                    <div class="company">
+                        <div class="heading">COMPANY</div>
+                        <div>About</div>
+                        <div>Features</div>
+                        <div>Works</div>
+                        <div>Career</div>
+                    </div>
+
+                    <div class="company">
+                        <div class="heading">HELP</div>
+                        <div>Customer Support</div>
+                        <div>Delivery Details</div>
+                        <div>Terms & Conditions</div>
+                        <div>Privacy Policy</div>
+                    </div>
+
+                </div>
+
+                <div class="company-help-wrap">
+                    <div class="company">
+                        <div class="heading">FAQ</div>
+                        <div>Account</div>
+                        <div>Manage Deliveries</div>
+                        <div>Orders</div>
+                        <div>Payments</div>
+                    </div>
+
+                    <div class="company">
+                        <div class="heading">RESOURCES</div>
+                        <div>Free eBooks</div>
+                        <div>Development Tutorial</div>
+                        <div>How to- Blog</div>
+                        <div>Youtube Playlist</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="payment-apps-container">
+                <div class="link">Shop.co © 2000-2023, All Rights Reserved</div>
+                <div class="payment-apps">
+                    <img src="static/image/visa.png" />
+                    <img src="static/image/mastercard.png" />
+                    <img src="static/image/paypal.png" />
+                    <img src="static/image/pay.png" />
+                    <img src="static/image/gpay.png" />
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="static/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            // slidesPerView: 3,
+            spaceBetween: 15,
+              autoplay:{
+                delay:3000,
+              },
+
+            autoHeight: true,
+
+            pagination: {
+                el: ".swiper-pagination",
+                type: "progressbar",
+            },
+
+            navigation: {
+                nextEl: ".next-btn",
+                prevEl: ".prev-btn",
+            },
+
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                },
+                500: {
+                    slidesPerView: 2,
+                },
+                800: {
+                    slidesPerView: 3,
+                },
+                1024: {
+                    slidesPerView: 3,
+                },
+            }
+        });
+
+          var swiper = new Swiper(".mySwiper1", {
+   
+            spaceBetween: 15,
+           
+            pagination: {
+                el: ".swiper-pagination",
+                type: "progressbar",
+            },
+            
+            breakpoints: {
+                0: {
+                    slidesPerView: 2,
+                },
+                700: {
+                    slidesPerView: 4,
+                },
+              
+            },
+               autoplay:{
+                delay:3000,
+              },
+
+
+
+        });
+
+    </script>
+</body>
+
+</html>
