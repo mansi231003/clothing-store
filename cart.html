@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon" />
+ 
+</head>
+
+<body>
+    <div class="flex-column-content-center cart-container">
+
+           <div class="sidebar-container" id="container">
+
+            <ul class="sidebar-menu">
+
+                <li style="text-align: right;" class="menu-item"><button class="sidebar-toggler button2"><i
+                            class="fa-solid fa-xmark"></i></button></li>
+
+                <li id="button" class="menu-item dropdown" data-target="menu1"><a class="nav-link" href="#">Shop
+                    </a><i class="fa-solid fa-caret-down arrow"></i></li>
+
+                <li class="sub-menu" data-target="menu1" id="pages">
+                    <ul class="sidebar-menu">
+                        <li class="menu-item"><a class="nav-link" href="#">Category1</a></li>
+                        <li class="menu-item"><a class="nav-link" href="#">Category2</a></li>
+                        <li class="menu-item"><a class="nav-link" href="#">Category3</a></li>
+
+                    </ul>
+                </li>
+
+                <li class="menu-item"><a class="nav-link" href="#">On Sale</a></li>
+
+                <li class="menu-item"><a class="nav-link" href="#">New Arrivals</a></li>
+
+
+                <li class="menu-item"><a class="nav-link" href="#">Brands</a></li>
+
+            </ul>
+            <div class="sidebar-overlay sidebar-toggler"></div>
+
+        </div>
+
+        <div class="announcement flex-content-center">
+            <div class="announcement-text-wrap flex-content-center">Sign up and get 20% off to your first order.
+                <div class="announcement-text">Sign Up Now</div>
+            </div>
+            <div class="icon"><i class="fa-solid fa-xmark"></i></div>
+        </div>
+
+        <div class="navbar-container flex-content-center">
+
+            <div class="shop">   <div class="side-button">
+                <button class="sidebar-toggler"><i class="fa-solid fa-bars"></i></button>
+            </div>SHOP.CO</div>
+            <div class="navmenu-container">
+                <ul class="navbar-menu flex-content-center">
+
+                    <li class="nav-item dropdown" data-target="menu1"><a class="nav-link" href="#">Shop <i
+                                class="fa fa-angle-down "></i></a>
+                        <ul class="sub-menu" data-target="menu1">
+                            <li class="sub-menu-item"><a class="sub-menu-link" href="#">Category1</a></li>
+                            <li class="sub-menu-item"><a class="sub-menu-link" href="#">Category2</a></li>
+                            <li class="sub-menu-item"><a class="sub-menu-link" href="#">Category3</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#">On Sale</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">New Arrivals</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Brands</a></li>
+                </ul>
+            </div>
+
+            <div class="search-container flex-content-center">
+                <div class="search-bar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input class="search" type="text" id="search" placeholder=" Search for products">
+                </div>
+
+                <div class="icons">
+                    <span class="material-symbols-outlined">
+                        shopping_cart
+                    </span>
+                    <span class="material-symbols-outlined">
+                        account_circle
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="nav-bar border-top">
+            <div class="bar-item grey-color">Home <i class="fa fa-angle-right "></i></div>
+            <div class="bar-item">Cart</div>
+        </div>
+
+        <div class="hero-section">
+            <h1 class="heading">YOUR CART</h1>
+            <div class="hero-section-container">
+
+                <div class="sub-container">
+                    <div class="cloths-cart border-bottom">
+                        <div class="image-container">
+                            <img class="image" src="static/image/product shirt2.png" />
+                        </div>
+                        <div class="cloth-details">
+                            <h4 class="name">Gradient Graphic T-shirt</h4>
+                            <div class="category">Size:<p>Large</p>
+                            </div>
+                            <div class="category">Color:<p>White</p>
+                            </div>
+                            <h5 class="font-size">$145</h5>
+
+                        </div>
+                        <div class="trash-container">
+                            <i class="fa-solid fa-trash-can"></i>
+
+                            <div class="button-shape flex-content-center flex-space-between">
+                                <h5 class="quantity"><i class="fa-solid fa-minus"></i></h5>
+                                <h5 class="quantity">1</h5>
+                                <h5 class="quantity"><i class="fa-solid fa-plus"></i></h5>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="cloths-cart border-bottom">
+                        <div class="image-container">
+                            <img class="image" src="static/image/check shirt.png" />
+                        </div>
+                        <div class="cloth-details">
+                            <h4 class="name">Checkered Shirt</h4>
+                            <div class="category">Size:<p>Medium</p>
+                            </div>
+                            <div class="category">Color:<p>Red</p>
+                            </div>
+                            <h5 class="font-size">$180</h5>
+
+                        </div>
+                        <div class="trash-container">
+                            <i class="fa-solid fa-trash-can"></i>
+
+                            <div class="button-shape flex-content-center flex-space-between">
+                                <h5 class="quantity"><i class="fa-solid fa-minus"></i></h5>
+                                <h5 class="quantity">1</h5>
+                                <h5 class="quantity"><i class="fa-solid fa-plus"></i></h5>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="cloths-cart">
+                        <div class="image-container">
+                            <img class="image" src="static/image/jean.png" />
+                        </div>
+                        <div class="cloth-details">
+                            <h4 class="name">Skinny Fit Jeans</h4>
+                            <div class="category">Size:<p>Large</p>
+                            </div>
+                            <div class="category">Color:<p>Blue</p>
+                            </div>
+                            <h5 class="font-size">$240</h5>
+
+                        </div>
+                        <div class="trash-container">
+                            <i class="fa-solid fa-trash-can"></i>
+
+                            <div class="button-shape flex-content-center flex-space-between">
+                                <h5 class="quantity"><i class="fa-solid fa-minus"></i></h5>
+                                <h5 class="quantity">1</h5>
+                                <h5 class="quantity"><i class="fa-solid fa-plus"></i></h5>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="sub-container">
+                    <h3 class="name">Order Summary</h3>
+                    <div class="total">
+                        <p>Subtotal</p>
+                        <h5 class="font-size">$565</h5>
+                    </div>
+                    <div class="total">
+                        <p>Discount(-20%)</p>
+                        <h5 class="font-size red-color">-$113</h5>
+                    </div>
+                    <div class="total border-bottom">
+                        <p>Delivery Fee</p>
+                        <h5 class="font-size">$15</h5>
+                    </div>
+                    <div class="total">
+                        <p>Total</p>
+                        <h5 class="font-size">$467</h5>
+                    </div>
+
+                    <div class="buttons-container">
+                        <div class="button-shape flex-content-center flex-start "><i class="fa-solid fa-tag"></i>Add promo code</div>
+                        <div class="button-shape flex-content-center button-width black-color-button">
+                          Apply
+                        </div>
+
+                    </div>
+                       <div class="buttons-container">
+                        <div class="button-shape flex-content-center black-color-button checkout-button">
+                          Go to Checkout<i class="fa-solid fa-arrow-right"></i>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+                    <div class="section-detail flex-column-content-center">
+
+              <div class="offers-section flex-content-center">
+            <div class="wrap">
+                <div class="heading-container">
+                    <h1 class="heading">STAY UPTO DATE ABOUT OUR LATEST OFFERS</h1>
+                </div>
+                <div class="buttons-container">
+                    <div class="button flex-content-center email">
+                        <i class="fa-regular fa-envelope"></i>
+                        <input class="email-box" type="text" id="search" placeholder="Enter your email address">
+                    </div>
+                    <div class="button flex-content-center">Subscribe to Newsletter</div>
+                </div>
+            </div>
+        </div>
+        
+            <div class="container">
+
+                <div class="description">
+                    <div class="shop">SHOP.CO</div>
+                    <div class="para">We have clothes that suits your style and which you’re proud to wear. From women to men.</div>
+                    <div class="social-media-icons-wrap">
+                        <a class="social-media-icon flex-content-center" href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a class="social-media-icon flex-content-center" href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a class="social-media-icon flex-content-center" href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a class="social-media-icon flex-content-center" href="#"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+
+                <div class="company-help-wrap">
+
+                    <div class="company">
+                        <div class="heading">COMPANY</div>
+                        <div>About</div>
+                        <div>Features</div>
+                        <div>Works</div>
+                        <div>Career</div>
+                    </div>
+
+                    <div class="company">
+                        <div class="heading">HELP</div>
+                        <div>Customer Support</div>
+                        <div>Delivery Details</div>
+                        <div>Terms & Conditions</div>
+                        <div>Privacy Policy</div>
+                    </div>
+
+                </div>
+
+                <div class="company-help-wrap">
+                    <div class="company">
+                        <div class="heading">FAQ</div>
+                        <div>Account</div>
+                        <div>Manage Deliveries</div>
+                        <div>Orders</div>
+                        <div>Payments</div>
+                    </div>
+
+                    <div class="company">
+                        <div class="heading">RESOURCES</div>
+                        <div>Free eBooks</div>
+                        <div>Development Tutorial</div>
+                        <div>How to- Blog</div>
+                        <div>Youtube Playlist</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="payment-apps-container">
+                <div class="link">Shop.co © 2000-2023, All Rights Reserved</div>
+                <div class="payment-apps">
+                    <img src="static/image/visa.png"/>
+                    <img src="static/image/mastercard.png"/>
+                    <img src="static/image/paypal.png"/>
+                    <img src="static/image/pay.png"/>
+                    <img src="static/image/gpay.png"/>
+                </div>
+            </div>
+
+        </div>
+
+        <div>
+
+            <script src="static/js/script.js"></script>
+
+</body>
+
+</html>

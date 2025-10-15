@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon" />
+
+</head>
+</head>
+
+<body>
+    <div class="flex-column-content-center cart-container">
+
+            <div class="sidebar-container" id="container">
+
+            <ul class="sidebar-menu">
+
+                <li style="text-align: right;" class="menu-item"><button class="sidebar-toggler button2"><i
+                            class="fa-solid fa-xmark"></i></button></li>
+
+                <li id="button" class="menu-item dropdown" data-target="menu1"><a class="nav-link" href="#">Shop
+                    </a><i class="fa-solid fa-caret-down arrow"></i></li>
+
+                <li class="sub-menu" data-target="menu1" id="pages">
+                    <ul class="sidebar-menu">
+                        <li class="menu-item"><a class="nav-link" href="#">Category1</a></li>
+                        <li class="menu-item"><a class="nav-link" href="#">Category2</a></li>
+                        <li class="menu-item"><a class="nav-link" href="#">Category3</a></li>
+
+                    </ul>
+                </li>
+
+                <li class="menu-item"><a class="nav-link" href="#">On Sale</a></li>
+
+                <li class="menu-item"><a class="nav-link" href="#">New Arrivals</a></li>
+
+
+                <li class="menu-item"><a class="nav-link" href="#">Brands</a></li>
+
+            </ul>
+            <div class="sidebar-overlay sidebar-toggler"></div>
+
+        </div>
+
+
+        <div class="announcement flex-content-center">
+            <div class="announcement-text-wrap flex-content-center">Sign up and get 20% off to your first order.
+                <div class="announcement-text">Sign Up Now</div>
+            </div>
+            <div class="icon"><i class="fa-solid fa-xmark"></i></div>
+        </div>
+
+        <div class="navbar-container flex-content-center">
+
+           
+            <div class="shop"> <div class="side-button">
+                <button class="sidebar-toggler"><i class="fa-solid fa-bars"></i></button>
+            </div>SHOP.CO</div>
+            <div class="navmenu-container">
+                <ul class="navbar-menu flex-content-center">
+
+                    <li class="nav-item dropdown" data-target="menu1"><a class="nav-link" href="#">Shop <i
+                                class="fa fa-angle-down "></i></a>
+                        <ul class="sub-menu" data-target="menu1">
+                            <li class="sub-menu-item"><a class="sub-menu-link" href="#">Category1</a></li>
+                            <li class="sub-menu-item"><a class="sub-menu-link" href="#">Category2</a></li>
+                            <li class="sub-menu-item"><a class="sub-menu-link" href="#">Category3</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#">On Sale</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">New Arrivals</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Brands</a></li>
+                </ul>
+            </div>
+
+            <div class="search-container flex-content-center">
+                <div class="search-bar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input class="search" type="text" id="search" placeholder=" Search for products">
+                </div>
+
+                <div class="icons">
+                    <span class="material-symbols-outlined">
+                        shopping_cart
+                    </span>
+                    <span class="material-symbols-outlined">
+                        account_circle
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="nav-bar border-top">
+            <div class="bar-item grey-color">Home <i class="fa fa-angle-right "></i></div>
+            <div class="bar-item">Casual</div>
+        </div>
+
+        <div class="main-section flex-space-between">
+            <div class="filter-container">
+                <div class="name flex-space-between ">
+                    <h4>Filters</h4>
+                    <i class="fa-solid fa-sliders grey-color filter"></i>
+                    <i class="fa-solid fa-xmark grey-color cross"></i>
+                </div>
+
+                <div class="cloth-names-container flex-column-content-center border-top border-bottom">
+                    <div class="width flex-space-between grey-color">T-shirts <i class="fa fa-angle-right"></i></div>
+                    <div class="width flex-space-between grey-color">Shorts <i class="fa fa-angle-right"></i></div>
+                    <div class="width flex-space-between grey-color">Shirts <i class="fa fa-angle-right"></i></div>
+                    <div class="width flex-space-between grey-color">Hoodie <i class="fa fa-angle-right"></i></div>
+                    <div class="width flex-space-between grey-color">Jeans <i class="fa fa-angle-right"></i></div>
+                </div>
+
+                <div class="price-range flex-column-content-center border-bottom">
+                    <div class="width flex-space-between">
+                        <h4>Price</h4> <i class="fa fa-angle-up"></i>
+                    </div>
+                    <div class="line"></div>
+                    <div class="price flex-space-between">
+                        <p>$50</p>
+                        <p>$200</p>
+                    </div>
+                </div>
+
+                <div class="color-section border-bottom">
+
+                    <div class=" flex-space-between">
+                        <h4>Colors</h4> <i class="fa fa-angle-up"></i>
+                    </div>
+
+                    <div class="colors-container">
+                        <div class="circle green"></div>
+                        <div class="circle red"></div>
+                        <div class="circle yellow"></div>
+                        <div class="circle orange"></div>
+                        <div class="circle sky-blue"></div>
+                        <div class="circle blue flex-content-center"><i class="fa-solid fa-check"></i></div>
+                        <div class="circle purple"></div>
+                        <div class="circle pink"></div>
+                        <div class="circle white"></div>
+                        <div class="circle black"></div>
+
+                    </div>
+
+                </div>
+
+                <div class="size-section">
+                    <div class="name flex-space-between">
+                        <h4>Size</h4> <i class="fa fa-angle-up"></i>
+                    </div>
+
+                    <div class="choose-size">
+                        <div class="button-shape flex-content-center">XX-Small</div>
+                        <div class="button-shape flex-content-center">X-Small</div>
+                        <div class="button-shape flex-content-center ">Small</div>
+                        <div class="button-shape flex-content-center">Medium</div>
+                        <div class="button-shape flex-content-center black-color-button">Large</div>
+                        <div class="button-shape flex-content-center">X-Large</div>
+                        <div class="button-shape flex-content-center ">XX-Large</div>
+                        <div class="button-shape flex-content-center">3X-Large</div>
+                        <div class="button-shape flex-content-center">4X-Large</div>
+
+                    </div>
+
+                </div>
+
+                <div class="dress-style flex-column-content-center border-top">
+                    <div class="width flex-space-between">
+                        <h4>Dress Style</h4> <i class="fa fa-angle-up"></i>
+                    </div>
+
+                    <div class="cloth-names-container flex-column-content-center">
+                        <div class="width flex-space-between grey-color">Casual <i class="fa fa-angle-right"></i></div>
+                        <div class="width flex-space-between grey-color">Formal <i class="fa fa-angle-right"></i></div>
+                        <div class="width flex-space-between grey-color">Party <i class="fa fa-angle-right"></i></div>
+                        <div class="width flex-space-between grey-color">Gym <i class="fa fa-angle-right"></i></div>
+                    </div>
+                    <div class="button-shape flex-content-center black-color-button">Apply Filter</div>
+
+                </div>
+            </div>
+
+
+            <div class="casual-section">
+
+                <div class="heading-container flex-space-between">
+                    <h2>Casual</h2>
+                    <div class=" left flex-space-between">
+                        <p class="grey-color">Showing 1-10 of 100 Products</p>
+                        <p class="grey-color">Sort by:
+                        <p>Most Popular</p> <i class="fa fa-angle-down"></i></p>
+                        <div class="select click">
+                    <i class="fa-solid fa-sliders filter"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cloth-section" id="new-arrival">
+<!-- 
+                    <div class="cloth-item">
+                        <div class="image-container"><img class="image" src="static/image/product shirt2.png" /></div>
+                        <div>
+                            <h5>Gradient Graphic T-shirt</h5>
+                        </div>
+                        <div class="stars-container">
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half"></i>
+                            </div>
+                            <div class="rating">3.5/<p class="grey-color">5</p>
+                            </div>
+                        </div>
+                        <div>
+                            <h5 class="font-size">$145</h5>
+                        </div>
+                    </div>
+
+                    <div class="cloth-item">
+                        <div class="image-container"><img class="image" src="static/image/product shirt3.png" /></div>
+                        <div>
+                            <h5>Polo with Tipping Details</h5>
+                        </div>
+                        <div class="stars-container">
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half"></i>
+                            </div>
+                            <div class="rating">4.5/<p class="grey-color">5</p>
+                            </div>
+                        </div>
+                        <div>
+                            <h5 class="font-size">$180</h5>
+                        </div>
+                    </div>
+
+                    <div class="cloth-item">
+                        <div class="image-container"><img class="image" src="static/image/product shirt4.png" /></div>
+                        <div>
+                            <h5>Black Striped T-shirt</h5>
+                        </div>
+                        <div class="stars-container">
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="rating">5.0/<p class="grey-color">5</p>
+                            </div>
+                        </div>
+                        <div class="price">
+                            <h5 class="font-size">$120</h5>
+                            <h5 class="grey-color font-size"><s>$150</s></h5>
+                            <div class="discount flex-content-center">-30%</div>
+                        </div>
+                    </div>
+
+                    <div class="cloth-item">
+                        <div class="image-container"><img class="image" src="static/image/jean.png" /></div>
+                        <div>
+                            <h5>SKINNY FIT JEANS</h5>
+                        </div>
+                        <div class="stars-container">
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half"></i>
+                            </div>
+                            <div class="rating">3.5/<p class="grey-color">5</p>
+                            </div>
+                        </div>
+                        <div class="price">
+                            <h5 class="font-size">$240</h5>
+                            <h5 class="grey-color font-size"><s>$260</s></h5>
+                            <div class="discount flex-content-center">-20%</div>
+                        </div>
+                    </div>
+
+                    <div class="cloth-item ">
+                        <div class="image-container"><img class="image" src="static/image/check shirt.png" /></div>
+                        <div>
+                            <h5>CHECKERED SHIRT</h5>
+                        </div>
+                        <div class="stars-container">
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half"></i>
+                            </div>
+                            <div class="rating">4.5/<p class="grey-color">5</p>
+                            </div>
+                        </div>
+                        <div>
+                            <h5 class="font-size">$180</h5>
+                        </div>
+                    </div>
+
+                    <div class="cloth-item ">
+                        <div class="image-container"><img class="image" src="static/image/orange shirt.png" /></div>
+                        <div>
+                            <h5>SLEEVE STRIPED T-SHIRT</h5>
+                        </div>
+                        <div class="stars-container">
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half"></i>
+                            </div>
+                            <div class="rating">4.5/<p class="grey-color">5</p>
+                            </div>
+                        </div>
+                        <div class="price">
+                            <h5 class="font-size">$130</h5>
+                            <h5 class="grey-color font-size"><s>$160</s></h5>
+                            <div class="discount flex-content-center">-30%</div>
+                        </div>
+                    </div>
+ -->
+
+                </div>
+
+
+                <div class="last-container flex-space-between border-top">
+
+                    <div class="button"><i class="fa-solid fa-arrow-left"></i>Previous</div>
+                    <div class="numbers flex-space-between grey-color">
+                        <div class="select">1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div><i class="fa-solid fa-ellipsis"></i></div>
+                        <div>8</div>
+                        <div>9</div>
+                        <div>10</div>
+                    </div>
+                    <div class="button">Next<i class="fa-solid fa-arrow-right"></i></div>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+        <div class="section-detail flex-column-content-center">
+
+            <div class="offers-section flex-content-center">
+                <div class="wrap">
+                    <div class="heading-container">
+                        <h1 class="heading">STAY UPTO DATE ABOUT OUR LATEST OFFERS</h1>
+                    </div>
+                    <div class="buttons-container">
+                        <div class="button flex-content-center email">
+                            <i class="fa-regular fa-envelope"></i>
+                            <input class="email-box" type="text" id="search" placeholder="Enter your email address">
+                        </div>
+                        <div class="button flex-content-center">Subscribe to Newsletter</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+
+                <div class="description">
+                    <div class="shop">SHOP.CO</div>
+                    <div class="para">We have clothes that suits your style and which you’re proud to wear. From women
+                        to men.</div>
+                    <div class="social-media-icons-wrap">
+                        <a class="social-media-icon flex-content-center" href="#"><i
+                                class="fa-brands fa-twitter"></i></a>
+                        <a class="social-media-icon flex-content-center" href="#"><i
+                                class="fa-brands fa-facebook"></i></a>
+                        <a class="social-media-icon flex-content-center" href="#"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a class="social-media-icon flex-content-center" href="#"><i
+                                class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+
+                <div class="company-help-wrap">
+
+                    <div class="company">
+                        <div class="heading">COMPANY</div>
+                        <div>About</div>
+                        <div>Features</div>
+                        <div>Works</div>
+                        <div>Career</div>
+                    </div>
+
+                    <div class="company">
+                        <div class="heading">HELP</div>
+                        <div>Customer Support</div>
+                        <div>Delivery Details</div>
+                        <div>Terms & Conditions</div>
+                        <div>Privacy Policy</div>
+                    </div>
+
+                </div>
+
+                <div class="company-help-wrap">
+                    <div class="company">
+                        <div class="heading">FAQ</div>
+                        <div>Account</div>
+                        <div>Manage Deliveries</div>
+                        <div>Orders</div>
+                        <div>Payments</div>
+                    </div>
+
+                    <div class="company">
+                        <div class="heading">RESOURCES</div>
+                        <div>Free eBooks</div>
+                        <div>Development Tutorial</div>
+                        <div>How to- Blog</div>
+                        <div>Youtube Playlist</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="payment-apps-container">
+                <div class="link">Shop.co © 2000-2023, All Rights Reserved</div>
+                <div class="payment-apps">
+                    <img src="static/image/visa.png" />
+                    <img src="static/image/mastercard.png" />
+                    <img src="static/image/paypal.png" />
+                    <img src="static/image/pay.png" />
+                    <img src="static/image/gpay.png" />
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="static/js/script.js"></script>
+</body>
+
+</html>
