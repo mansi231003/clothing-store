@@ -113,10 +113,10 @@
             <div class="hero-section-container">
 
                 <div class="t-shirt-container">
-                    <div class="column-t-shirts">
-                        <img class="t-shirt-image" src="static/image/image 2.png" />
-                        <img class="t-shirt-image" src="static/image/image 5.png" />
-                        <img class="t-shirt-image" src="static/image/image 6.png" />
+                    <div class="column-t-shirts-container">
+                        <div class="column-t-shirt"><img class="t-shirt-image" src="static/image/image 2.png" /></div>
+                        <div class="column-t-shirt"><img class="t-shirt-image" src="static/image/image 5.png" /></div>
+                        <div class="column-t-shirt"><img class="t-shirt-image" src="static/image/image 6.png" /></div>
                     </div>
                     <div class="huge-t-shirt">
                         <img class="t-shirt-image" src="static/image/image 1.png" />
@@ -185,9 +185,9 @@
 
         <div class="review-section flex-column-content-center">
             <div class="top-bar">
-                <div>Product Details</div>
-                <div>Rating & Reviews</div>
-                <div>FAQs</div>
+                <div class="name grey-color">Product Details</div>
+                <div class="name">Rating & Reviews</div>
+                <div class="name grey-color">FAQs</div>
             </div>
 
             <div class="review-tab">
@@ -197,8 +197,8 @@
                 </div>
                 <div class="size-container">
                     <div class="button-shape flex-content-center button-width"><i class="fa-solid fa-sliders"></i></div>
-                    <div class="button-shape flex-content-center">Latest <i class="fa fa-angle-down "></i></div>
-                    <div class="button-shape flex-content-center black-color button-width">Write a Review</div>
+                    <div class="button-shape flex-content-center latest">Latest <i class="fa fa-angle-down "></i></div>
+                    <div class="button-shape flex-content-center black-color-button">Write a Review</div>
                 </div>
             </div>
 
@@ -247,7 +247,7 @@
                             the print quality is top-notch. Being a UI/UX designer myself, I'm quite picky about
                             aesthetics, and this t-shirt definitely gets a thumbs up from me."</p>
                     </div>
-                    <div>Posted on August 15,2023</div>
+                    <div class="grey-color">Posted on August 15,2023</div>
                 </div>
 
                 <div class="customer-feedback">
@@ -270,7 +270,7 @@
                             The minimalistic yet stylish pattern caught my eye, and the fit is perfect. I can see the
                             designer's touch in every aspect of this shirt."</p>
                     </div>
-                    <div>Posted on August 16,2023</div>
+                    <div class="grey-color">Posted on August 16,2023</div>
                 </div>
 
                 <div class="customer-feedback">
@@ -293,12 +293,12 @@
                             t-shirt not only represents those principles but also feels great to wear. It's evident that
                             the designer poured their creativity into making this t-shirt stand out."</p>
                     </div>
-                    <div>Posted on August 17,2023</div>
+                    <div class="grey-color">Posted on August 17,2023</div>
                 </div>
 
             </div>
 
-            <div class="review-container">
+            <div class="review-container display-none">
                 <div class="customer-feedback">
                     <div class="star-container">
                         <div class="stars">
@@ -320,7 +320,7 @@
                             art that reflects my passion for both design and fashion."</p>
                     </div>
 
-                    <div>Posted on August 18,2023</div>
+                    <div class="grey-color">Posted on August 18,2023</div>
                 </div>
 
                 <div class="customer-feedback">
@@ -343,7 +343,7 @@
                             philosophy. The intricate details and thoughtful layout of the design make this shirt a
                             conversation starter."</p>
                     </div>
-                    <div>Posted on August 19,2023</div>
+                    <div class="grey-color">Posted on August 19,2023</div>
                 </div>
             </div>
 
@@ -354,11 +354,13 @@
         </div>
 
         <div class="cloths-section flex-column-content-center">
-            <h1 class="heading">YOU MIGHT ALSO LIKE</h1>
+            <h1 class="heading flex-content-center">YOU MIGHT ALSO LIKE</h1>
 
-            <div class="cloth-item-wrapper">
+            <div class="cloth-item-wrapper swiper mySwiper">
 
-                <div class="cloth-item">
+                <div id="new-arrival" class="swiper-wrapper flex-space-between"> 
+
+                <!-- <div class="cloth-item">
                     <div class="image-container"><img class="image" src="static/image/product shirts1.png" /></div>
                     <div>
                         <h5>Polo with Contrast Trims</h5>
@@ -442,8 +444,9 @@
                         <h5 class="grey-color font-size"><s>$150</s></h5>
                         <div class="discount flex-content-center">-30%</div>
                     </div>
-                </div>
+                </div> -->
 
+                </div>
             </div>
 
         </div>
@@ -532,9 +535,40 @@
         </div>
 
     </div>
+    
 
     <script src="static/js/script.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
+    <script>
+
+          var swiper = new Swiper(".mySwiper", {
+   
+            spaceBetween: 15,
+           
+            pagination: {
+                el: ".swiper-pagination",
+                type: "progressbar",
+            },
+            
+            breakpoints: {
+                0: {
+                    slidesPerView: 2,
+                },
+                700: {
+                    slidesPerView: 4,
+                },
+              
+            },
+               autoplay:{
+                // delay:3000,
+              },
+
+
+
+        });
+
+    </script>
 
 </body>
 

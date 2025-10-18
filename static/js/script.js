@@ -56,6 +56,27 @@ toggles.forEach(toggler => {
         else {
             container.classList.add("active");
 
+        }
+
+    })
+})
+
+
+
+const filterButtons = document.querySelectorAll('.filter-button');
+const filterContainer = document.querySelector(".filter-container")
+
+
+filterButtons.forEach(filterButton => {
+    filterButton.addEventListener(`click`, () => {
+
+
+        if (filterContainer.classList.contains("active")) {
+            filterContainer.classList.remove("active");
+
+        }
+        else {
+            filterContainer.classList.add("active");
 
         }
 
@@ -63,26 +84,11 @@ toggles.forEach(toggler => {
 })
 
 
-// const filter = document.querySelector(".filter-container");
-// const filterButton = document.querySelector(".click");
-// const cross = document.querySelector(".cross")
-
-// filterButton.addEventListener(`click`, () => {
-//     filter.classList.add("active");
-// })
-
-// cross.addEventListener(`click`, () => {
-//     filter.classList.remove("active")
-// })
-
-
-
-
 
 
 const Productdata = [
     {
-        "collection": "New Arrival",
+        "collection":['new arrival'],
         "id": 13456734,
         "title": "T-shirt with Tape Details",
         "tags": ['men', 'women', 'casual'],
@@ -122,7 +128,7 @@ const Productdata = [
         ]
     },
     {
-        "collection":"Top Selling",
+        "collection":['top selling', 'best selling'],
         "id": 13456735,
         "title": "Skinny Fit Jeans",
         "tags": ['men', 'formal', 'casual'],
@@ -153,7 +159,7 @@ const Productdata = [
         ]
     },
     {
-        "collection": "New Arrival",
+        "collection": ['new arrival','best selling'],
         "id": 13456736,
         "title": "Checkered Shirt",
         "tags": ['women', 'casual', 'trending'],
@@ -193,7 +199,7 @@ const Productdata = [
         ]
     },
     {
-        "collection": "New Arrival",
+        "collection":['new arrival','best selling'],
         "id": 13456737,
         "title": "Sleeve Striped T-shirt",
         "tags": ['women', 'summer', 'party'],
@@ -224,7 +230,7 @@ const Productdata = [
         ]
     },
     {
-        "collection": "New Arrival",
+        "collection": ['top selling'],
         "id": 13456738,
         "title": "Vertical Striped Shirt",
         "tags": ['men', 'women', 'winter', 'casual'],
@@ -264,7 +270,7 @@ const Productdata = [
         ]
     },
     {
-        "collection": "New Arrival",
+        "collection": ['top selling', 'best selling'],
         "id": 13456739,
         "title": "Courage Graphic T-Shirt",
         "tags": ['men', 'summer', 'casual'],
@@ -295,7 +301,7 @@ const Productdata = [
         ]
     },
     {
-        "collection":"Top Selling",
+        "collection": ['new arrival', 'top selling', 'best selling'],
         "id": 13456740,
         "title": "Loose Fit Bermuda Shorts",
         "tags": ['kids', 'casual', 'fun'],
@@ -335,7 +341,7 @@ const Productdata = [
         ]
     },
     {
-        "collection": "New Arrival",
+        "collection": ['new arrival'],
         "id": 13456741,
         "title": "Faded Skinny Jeans",
         "tags": ['men', 'winter', 'premium'],
@@ -405,7 +411,7 @@ const Productdata = [
         ]
     },
     {
-        "collection":"Top Selling",
+        "collection": ['best selling'],
         "id": 13456743,
         "title": "Gradient Graphic T-shirt",
         "tags": ['men', 'casual', 'winter'],
@@ -475,7 +481,7 @@ const Productdata = [
         ]
     },
     {
-        "collection":"Top Selling",
+        "collection": ['new arrival'],
         "id": 13456745,
         "title": "Black Striped T-shirt",
         "tags": ['men', 'women', 'sports', 'fitness'],
@@ -545,7 +551,7 @@ const Productdata = [
         ]
     },
     {
-        "collection":"Top Selling",
+        "collection": ['new arrival', 'top selling', 'best selling'],
         "id": 13456747,
         "title": "Kids Denim Jacket",
         "tags": ['kids', 'casual', 'trendy'],
@@ -794,110 +800,133 @@ const Productdata = [
 ];
 
 
-function filterCollectiontType(){
+function getData() {
 
-    
+    return Productdata;
+
 }
+getData();
 
 
 
 
 
-function displayProduct(id,product,collectionType) {
 
+function displayProducts(id, product) {
     const itemWrap = document.getElementById(id);
+    let data = product;
+    // console.log(data);
+    data.forEach(item => {
 
-    console.log(itemWrap);
-    for (let i = 0; i < product.length; i++) {
+        const clothItem = document.createElement('div');
+        const imgContainer = document.createElement('div');
+        const img1 = document.createElement('img');
 
-        let itemDetails = product[i];
-        let id = itemDetails.id;
-        let title = itemDetails.title;
-        let ratings = itemDetails.rating + "/5";
-        let oPrice = itemDetails.original_price;
-        let sPrice = itemDetails.selling_price;
-        let image = itemDetails.featured_image;
-        let dPrice = "-" + Math.trunc(((oPrice - sPrice) / oPrice) * 100) + "%";
-        let collection = itemDetails.collection;
-      
+        const headingContainer = document.createElement('div');
+        const heading = document.createElement('h5');
+
+        const starContainer = document.createElement('div');
+        const stars = document.createElement('div');
+        const rating = document.createElement('div');
+        const ratingPara = document.createElement('p');
+
+        const price = document.createElement('div');
+        const priceHeading = document.createElement('h5');
+
+        const discountContainer = document.createElement('div');
+        const price2 = document.createElement('h5');
+        const discountPrice = document.createElement('h5');
+        const discount = document.createElement('div');
+        const strike = document.createElement('s');
+
+        clothItem.classList.add("cloth-item");
+        clothItem.classList.add("swiper-slide");
+        imgContainer.classList.add("image-container");
+        img1.classList.add("image");
+
+        starContainer.classList.add("stars-container");
+        stars.classList.add("stars");
+        rating.classList.add("rating");
+        ratingPara.classList.add("grey-color");
+
+        priceHeading.classList.add("font-size");
+
+        discountContainer.classList.add("price");
+        price2.classList.add("font-size");
+        discountPrice.classList.add("grey-color");
+        discountPrice.classList.add("font-size");
+        discount.classList.add("discount");
+        discount.classList.add("flex-content-center");
+
+        imgContainer.appendChild(img1);
+        clothItem.appendChild(imgContainer)
+
+        headingContainer.appendChild(heading);
+        clothItem.appendChild(headingContainer);
+
+        starContainer.appendChild(stars);
+        starContainer.appendChild(rating);
+        rating.appendChild(ratingPara);
+        clothItem.appendChild(starContainer);
+
+        price.appendChild(priceHeading);
+        // clothItem.appendChild(price);
+
+        discountPrice.appendChild(strike);
+        discountContainer.appendChild(price2);
+        discountContainer.appendChild(discountPrice);
+        discountContainer.appendChild(discount);
+
+        clothItem.appendChild(discountContainer);
+
+        itemWrap.appendChild(clothItem);
+
+        heading.innerHTML = item.title;
+        rating.innerHTML = item.rating + "/5";
+        price2.innerHTML = "$" + item.original_price;
+        strike.innerHTML = "$" + item.selling_price;
+        discount.innerHTML = "-" + Math.trunc(((item.original_price - item.selling_price) / item.original_price) * 100) + "%";
+        img1.src = item.featured_image;
+    })
+}
 
 
-            const clothItem = document.createElement('div');
-            const imgContainer = document.createElement('div');
-            const img1 = document.createElement('img');
 
-            const headingContainer = document.createElement('div');
-            const heading = document.createElement('h5');
 
-            const starContainer = document.createElement('div');
-            const stars = document.createElement('div');
-            const rating = document.createElement('div');
-            const ratingPara = document.createElement('p');
+function collectionType(type) {
+    let data = getData();
+    let filterProduct = [];
+ 
+   
+    data.forEach(product => {
+         let collArray=product.collection;
+        try{
 
-            const price = document.createElement('div');
-            const priceHeading = document.createElement('h5');
+   
+        collArray.forEach(collection=>{
+        // console.log(coll);
 
-            const discountContainer = document.createElement('div');
-            const price2 = document.createElement('h5');
-            const discountPrice = document.createElement('h5');
-            const discount = document.createElement('div');
-            const strike = document.createElement('s');
+         if (collection == type) {
+            filterProduct.push(product);
+            console.log(filterProduct);
+        }
+        })
+        }
+        catch{
 
-            clothItem.classList.add("cloth-item");
-            clothItem.classList.add("swiper-slide");
-            imgContainer.classList.add("image-container");
-            img1.classList.add("image");
-
-            starContainer.classList.add("stars-container");
-            stars.classList.add("stars");
-            rating.classList.add("rating");
-            ratingPara.classList.add("grey-color");
-
-            priceHeading.classList.add("font-size");
-
-            discountContainer.classList.add("price");
-            price2.classList.add("font-size");
-            discountPrice.classList.add("grey-color");
-            discountPrice.classList.add("font-size");
-            discount.classList.add("discount");
-            discount.classList.add("flex-content-center");
-
-            imgContainer.appendChild(img1);
-            clothItem.appendChild(imgContainer)
-
-            headingContainer.appendChild(heading);
-            clothItem.appendChild(headingContainer);
-
-            starContainer.appendChild(stars);
-            starContainer.appendChild(rating);
-            rating.appendChild(ratingPara);
-            clothItem.appendChild(starContainer);
-
-            price.appendChild(priceHeading);
-            // clothItem.appendChild(price);
-
-            discountPrice.appendChild(strike);
-            discountContainer.appendChild(price2);
-            discountContainer.appendChild(discountPrice);
-            discountContainer.appendChild(discount);
-
-            clothItem.appendChild(discountContainer);
-
-            itemWrap.appendChild(clothItem);
-
-            heading.innerHTML = title;
-            rating.innerHTML = ratings;
-            price2.innerHTML = "$" + oPrice;
-            strike.innerHTML = "$" + sPrice;
-            discount.innerHTML = dPrice;
-            img1.src = image;
-        
-    }
+        }
+  
+       
+    })
+    return filterProduct;
 
 }
-displayProduct("new-arrival",Productdata);
-displayProduct("top-selling",Productdata,"Top Selling");
+const filterProduct = collectionType("new arrival");
 
+
+
+displayProducts("new-arrival", filterProduct);
+displayProducts("top-selling", Productdata);
 
 
 

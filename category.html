@@ -105,11 +105,11 @@
         </div>
 
         <div class="main-section flex-space-between">
-            <div class="filter-container">
+            <div class="filter-container" id="container">
                 <div class="name flex-space-between ">
                     <h4>Filters</h4>
                     <i class="fa-solid fa-sliders grey-color filter"></i>
-                    <i class="fa-solid fa-xmark grey-color cross"></i>
+                    <i class="fa-solid fa-xmark grey-color cross filter-button"></i>
                 </div>
 
                 <div class="cloth-names-container flex-column-content-center border-top border-bottom">
@@ -196,146 +196,16 @@
                     <h2>Casual</h2>
                     <div class=" left flex-space-between">
                         <p class="grey-color">Showing 1-10 of 100 Products</p>
-                        <p class="grey-color">Sort by:
-                        <p>Most Popular</p> <i class="fa fa-angle-down"></i></p>
-                        <div class="select click">
+                        <p class="grey-color sort">Sort by:</p>
+                        <p class="sort">Most Popular <i class="fa fa-angle-down"></i></p>
+                        <div class="select filter-button">
                     <i class="fa-solid fa-sliders filter"></i>
                         </div>
                     </div>
                 </div>
 
                 <div class="cloth-section" id="new-arrival">
-<!-- 
-                    <div class="cloth-item">
-                        <div class="image-container"><img class="image" src="static/image/product shirt2.png" /></div>
-                        <div>
-                            <h5>Gradient Graphic T-shirt</h5>
-                        </div>
-                        <div class="stars-container">
-                            <div class="stars">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star-half"></i>
-                            </div>
-                            <div class="rating">3.5/<p class="grey-color">5</p>
-                            </div>
-                        </div>
-                        <div>
-                            <h5 class="font-size">$145</h5>
-                        </div>
-                    </div>
 
-                    <div class="cloth-item">
-                        <div class="image-container"><img class="image" src="static/image/product shirt3.png" /></div>
-                        <div>
-                            <h5>Polo with Tipping Details</h5>
-                        </div>
-                        <div class="stars-container">
-                            <div class="stars">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star-half"></i>
-                            </div>
-                            <div class="rating">4.5/<p class="grey-color">5</p>
-                            </div>
-                        </div>
-                        <div>
-                            <h5 class="font-size">$180</h5>
-                        </div>
-                    </div>
-
-                    <div class="cloth-item">
-                        <div class="image-container"><img class="image" src="static/image/product shirt4.png" /></div>
-                        <div>
-                            <h5>Black Striped T-shirt</h5>
-                        </div>
-                        <div class="stars-container">
-                            <div class="stars">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <div class="rating">5.0/<p class="grey-color">5</p>
-                            </div>
-                        </div>
-                        <div class="price">
-                            <h5 class="font-size">$120</h5>
-                            <h5 class="grey-color font-size"><s>$150</s></h5>
-                            <div class="discount flex-content-center">-30%</div>
-                        </div>
-                    </div>
-
-                    <div class="cloth-item">
-                        <div class="image-container"><img class="image" src="static/image/jean.png" /></div>
-                        <div>
-                            <h5>SKINNY FIT JEANS</h5>
-                        </div>
-                        <div class="stars-container">
-                            <div class="stars">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star-half"></i>
-                            </div>
-                            <div class="rating">3.5/<p class="grey-color">5</p>
-                            </div>
-                        </div>
-                        <div class="price">
-                            <h5 class="font-size">$240</h5>
-                            <h5 class="grey-color font-size"><s>$260</s></h5>
-                            <div class="discount flex-content-center">-20%</div>
-                        </div>
-                    </div>
-
-                    <div class="cloth-item ">
-                        <div class="image-container"><img class="image" src="static/image/check shirt.png" /></div>
-                        <div>
-                            <h5>CHECKERED SHIRT</h5>
-                        </div>
-                        <div class="stars-container">
-                            <div class="stars">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star-half"></i>
-                            </div>
-                            <div class="rating">4.5/<p class="grey-color">5</p>
-                            </div>
-                        </div>
-                        <div>
-                            <h5 class="font-size">$180</h5>
-                        </div>
-                    </div>
-
-                    <div class="cloth-item ">
-                        <div class="image-container"><img class="image" src="static/image/orange shirt.png" /></div>
-                        <div>
-                            <h5>SLEEVE STRIPED T-SHIRT</h5>
-                        </div>
-                        <div class="stars-container">
-                            <div class="stars">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star-half"></i>
-                            </div>
-                            <div class="rating">4.5/<p class="grey-color">5</p>
-                            </div>
-                        </div>
-                        <div class="price">
-                            <h5 class="font-size">$130</h5>
-                            <h5 class="grey-color font-size"><s>$160</s></h5>
-                            <div class="discount flex-content-center">-30%</div>
-                        </div>
-                    </div>
- -->
 
                 </div>
 

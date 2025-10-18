@@ -127,6 +127,10 @@ body.no-scroll {
 
 
 
+.border-left {
+    border-left: solid 1px grey;
+
+}
 
 
 .border-top {
@@ -303,7 +307,8 @@ body.no-scroll {
 
 .homepage-container .hero-section .para-container {
     width: 77%;
-    font-size: 13px;
+    font-size: 16px;
+    padding-bottom: 16px;
 }
 
 
@@ -339,22 +344,16 @@ body.no-scroll {
     width: 100%;
 }
 
-.ratings-container .left {
+.ratings-container .sub-container {
     display: flex;
     gap: 10px;
     font-size: 11px;
 
 }
 
-.ratings-container .right {
-    font-size: 11px;
 
-}
-
-
-.ratings-container .left .rating-section {
-    border-right: solid 1px gray;
-    padding-right: 10px;
+.ratings-container .sub-container .rating-section {
+    padding-left: 10px;
     width: max-content;
 }
 
@@ -448,6 +447,7 @@ body.no-scroll {
     justify-content: space-around;
     align-items: center;
     width: 100%;
+    overflow: hidden;
 
 }
 
@@ -480,7 +480,7 @@ body.no-scroll {
 }
 
 .font-size {
-    font-size: 18px !important;
+    font-size: 18px;
 }
 
 .price .discount {
@@ -582,10 +582,6 @@ body.no-scroll {
     /* transform: translateX(-380px); */
 }
 
-/* .swiper-slide{
-    height: 120px !important;
-    width: 20px !important;
-} */
 
 
 .customer-feedback {
@@ -633,7 +629,7 @@ body.no-scroll {
 
 .offers-section .wrap {
     display: flex;
-    width: 90%;
+    width: 94%;
     justify-content: space-between;
     align-items: center;
 
@@ -816,11 +812,19 @@ body.no-scroll {
     gap: 12px;
 }
 
-.column-t-shirts {
+.column-t-shirts-container {
     display: flex;
     flex-direction: column;
     gap: 5px;
     width: 25%;
+}
+
+.column-t-shirts-container .column-t-shirt {
+    width: 100%;
+}
+
+.column-t-shirts-container .column-t-shirt .t-shirt-image {
+    width: 100%;
 }
 
 
@@ -986,6 +990,8 @@ body.no-scroll {
 
 .review-container .customer-feedback {
     width: 94%;
+    height: 155px;
+    gap: 10px;
 }
 
 .star-container {
@@ -1042,7 +1048,7 @@ body.no-scroll {
 .cart-container .hero-section .hero-section-container .sub-container {
     width: 50%;
     border: solid 1px #0000001A;
-    padding: 0px 15px 0px 15px;
+    padding: 15px 15px 20px 15px;
     border-radius: 15px;
 }
 
@@ -1314,6 +1320,10 @@ category css */
     display: none;
 }
 
+.display-none {
+    display: none;
+}
+
 
 
 /* homepage */
@@ -1366,6 +1376,11 @@ category css */
 
     .homepage-container .hero-section .image-container .image {
         top: -74px;
+    }
+
+    .homepage-container .hero-section .para-container {
+        font-size: 15px;
+        width: 86%;
     }
 
     .brands-container.flex-content-center {
@@ -1436,7 +1451,7 @@ category css */
         width: 90%;
     }
 
-    .section-detail .container{
+    .section-detail .container {
         padding: 30px 0px 30px 0px;
 
     }
@@ -1457,6 +1472,98 @@ category css */
         width: 20%;
     }
 
+    /* product */
+
+    .hero-section-container {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .t-shirt-container {
+        flex-direction: column-reverse;
+        width: 98%;
+    }
+
+    .column-t-shirts-container {
+        flex-direction: row;
+        width: 100%;
+        gap: 8px;
+    }
+
+    .huge-t-shirt {
+        width: 100%;
+    }
+
+    .huge-t-shirt .t-shirt-image {
+        aspect-ratio: 1/1;
+    }
+
+    .column-t-shirts-container .t-shirt-image {
+        width: 100%;
+    }
+
+    .t-shirt-details {
+        width: 100%;
+    }
+
+    .review-section {
+        padding-top: 60px;
+    }
+
+    .review-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* categoryyyy */
+
+
+    .filter-container {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        top: 110px;
+        width: 90%;
+        position: absolute;
+        overflow: hidden;
+        z-index: 999;
+        transform: translateX(-109%);
+        transition: transform .9s ease;
+    }
+
+    .casual-section .heading-container .sort {
+        display: none;
+    }
+
+    .casual-section .heading-container .select {
+        display: flex;
+    }
+
+
+    .filter-container.active {
+        transform: translateX(-3%);
+
+    }
+
+    .filter-container .filter {
+        display: none;
+    }
+
+
+    .filter-container .name .cross {
+        display: flex;
+
+
+    }
+
+    /* cart  */
+
+    .cart-container .hero-section-container {
+        flex-direction: column;
+    }
+
+    .cart-container .hero-section .hero-section-container .sub-container {
+        width: 95%;
+    }
 }
 
 
@@ -1467,8 +1574,30 @@ category css */
         width: 100%;
     }
 
+    .homepage-container .hero-section .image-container {
+        height: 492px;
+    }
+
     .homepage-container .hero-section .image-container .image {
         top: 0;
+    }
+
+    .homepage-container .hero-section .left-container .button {
+        width: 75%;
+    }
+
+    .ratings-container .sub-container .rating-section {
+
+        width: 100%;
+    }
+
+    .ratings-container {
+        flex-direction: column;
+        width: 84%;
+    }
+
+    .ratings-container .sub-container.border-left {
+        border-left: solid 1px transparent;
     }
 
     .offers-section {
@@ -1519,28 +1648,191 @@ category css */
         padding-top: 10px;
     }
 
-    /* categoryyyy */
-
-    .filter-container {
+    .latest {
         display: none;
     }
 
-    .filter-container .filter {
-        display: none;
+    .review-tab .size-container {
+        width: 55%;
     }
 
-    .filter-container.active {
-        display: flex;
-        flex-direction: column;
+    .review-tab .left {
+        width: 42%;
+        font-size: 15px;
     }
 
-    .filter-container .name .cross {
-        display: flex;
+    .size-container {
+        width: 100%;
+    }
+
+    /* 
+    productttt */
+
+    .product-detail-container .cloths-section .heading {
+        width: 240px;
+    }
+
+    .product-detail-container .cloths-section {
+        padding-bottom: 100px;
     }
 
 
-    .casual-section .heading-container .select {
-        display: flex;
+    /* categoryyy */
+
+    .casual-section .cloth-section {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .main-section {
+        padding-bottom: 110px;
+    }
+
+
+    .casual-section .cloth-section .cloth-item h5 {
+        font-size: 12px;
+    }
+
+    .cart-container .nav-bar {
+        padding: 20px 0px 20px 0px;
+    }
+
+
+
+}
+
+@media screen and (max-width:350px) {
+
+    .announcement-text-wrap {
+        font-size: 10px;
+
+    }
+
+    .heading {
+        font-size: 26px;
+    }
+
+    .homepage-container .hero-section .heading-container {
+        width: 229px;
+
+    }
+
+    .homepage-container .hero-section .para-container {
+        font-size: 12px;
+        width: 90%;
+    }
+
+
+    .homepage-container .hero-section .image-container {
+        height: 358px;
+    }
+
+    .ratings-container .sub-container .rating-section {
+        font-size: 10px;
+    }
+
+    .rating-number {
+        font-size: 23px;
+    }
+
+    .vector {
+        top: 143px;
+        width: 15%;
+        left: 10px;
+    }
+
+    .dress-style-section .heading {
+        width: 83%;
+        font-size: 30px;
+    }
+
+    .img-name {
+        top: 20px;
+        left: 20px;
+        font-size: 20px;
+    }
+
+    .section-detail {
+        padding-top: 135px;
+    }
+
+
+    /* producttt */
+
+    .product-detail-container {
+        overflow-x: hidden;
+    }
+
+    .hero-section .nav-menu-container .navbar-menu {
+        font-size: 12px;
+    }
+
+    .t-shirt-details .heading {
+        font-size: 24px;
+    }
+
+    .t-shirt-details .para {
+        font-size: 11px;
+    }
+
+    .t-shirt-details {
+        padding-left: 0;
+    }
+
+    .product-detail-container .cloths-section .heading {
+        width: 157px;
+    }
+
+    .size-container {
+        gap: 3px;
+    }
+
+    .review-tab .left {
+        font-size: 11px;
+    }
+
+    .button-shape {
+        font-size: 9px;
+    }
+
+    .review-section .top-bar {
+        width: 100%;
+    }
+
+    .review-section .top-bar .name {
+        font-size: 12px;
+    }
+
+    .customer-feedback .description {
+        width: 93%;
+        font-size: 10px;
+
+    }
+
+    .customer-feedback {
+        padding: 18px 0px 28px 8px;
+    }
+
+    .payment-apps-container .link {
+        font-size: 10px;
+    }
+
+    .company-help-wrap .company {
+        font-size: 11px;
+    }
+
+    .font-size {
+        font-size: 14px;
+    }
+
+
+    .casual-section .heading-container {
+        font-size: 12px;
+    }
+
+    /* categoryyy */
+
+    .casual-section .heading-container .left {
+        font-size: 11px;
     }
 
 
