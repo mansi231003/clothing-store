@@ -50,11 +50,13 @@ toggles.forEach(toggler => {
 
         if (container.classList.contains("active")) {
             container.classList.remove("active");
+            document.body.classList.remove("no-scroll")
 
 
         }
         else {
             container.classList.add("active");
+            document.body.classList.add("no-scroll")
 
         }
 
@@ -64,7 +66,7 @@ toggles.forEach(toggler => {
 
 
 const filterButtons = document.querySelectorAll('.filter-button');
-const filterContainer = document.querySelector(".filter-container")
+const filterContainer = document.getElementById("container2")
 
 
 filterButtons.forEach(filterButton => {
@@ -73,29 +75,50 @@ filterButtons.forEach(filterButton => {
 
         if (filterContainer.classList.contains("active")) {
             filterContainer.classList.remove("active");
+            document.body.classList.remove("no-scroll")
 
         }
         else {
             filterContainer.classList.add("active");
+            document.body.classList.add("no-scroll")
 
         }
 
     })
 })
 
+const filterDropdowns = document.querySelectorAll('.filter-dropdown');
+const filterSections = document.querySelectorAll('.filter-section');
 
+filterDropdowns.forEach(filterDropdown => {
+    filterDropdown.addEventListener(`click`, () => {
+        filterSections.forEach(filterSection => {
+            if (filterSection.dataset.target == filterDropdown.dataset.target) {
+                if (filterSection.classList.contains("active")) {
+                    filterSection.classList.remove("active");
+                    filterDropdown.classList.remove("active");
+                }
+                else {
+                    filterSection.classList.add("active");
+                    filterDropdown.classList.add("active");
+                }
+            }
+
+        })
+    })
+})
 
 
 const Productdata = [
     {
-        "collection":['new arrival'],
+        "collection": ['new arrival'],
         "id": 13456734,
         "title": "T-shirt with Tape Details",
         "tags": ['men', 'women', 'casual'],
         "original_price": "400",
         "selling_price": "300",
         "featured_image": "static/image/black-tshirt.png",
-        "rating": "4.5",
+        "rating": "3.5",
         "stock": "15",
         "variants": [
             {
@@ -128,7 +151,7 @@ const Productdata = [
         ]
     },
     {
-        "collection":['top selling', 'best selling'],
+        "collection": ['top selling', 'best selling'],
         "id": 13456735,
         "title": "Skinny Fit Jeans",
         "tags": ['men', 'formal', 'casual'],
@@ -150,7 +173,7 @@ const Productdata = [
             {
                 "title": "Skinny Fit Jeans",
                 "size": "L",
-                "color": "Green",
+                "color": "green",
                 "original_price": "850",
                 "selling_price": "650",
                 "featured_image": "static/image/jean.png",
@@ -159,7 +182,7 @@ const Productdata = [
         ]
     },
     {
-        "collection": ['new arrival','best selling'],
+        "collection": ['new arrival', 'best selling'],
         "id": 13456736,
         "title": "Checkered Shirt",
         "tags": ['women', 'casual', 'trending'],
@@ -190,7 +213,7 @@ const Productdata = [
             {
                 "title": "Checkered Shirt",
                 "size": "32",
-                "color": "Black",
+                "color": "black",
                 "original_price": "1300",
                 "selling_price": "1000",
                 "featured_image": "static/image/check shirt.png",
@@ -199,7 +222,7 @@ const Productdata = [
         ]
     },
     {
-        "collection":['new arrival','best selling'],
+        "collection": ['new arrival', 'best selling'],
         "id": 13456737,
         "title": "Sleeve Striped T-shirt",
         "tags": ['women', 'summer', 'party'],
@@ -799,6 +822,14 @@ const Productdata = [
     }
 ];
 
+let obj = {
+    colors: [],
+    sizes: [],
+    price: []
+}
+let filterProducts = [];
+
+
 
 function getData() {
 
@@ -807,13 +838,166 @@ function getData() {
 }
 getData();
 
+let objSize = obj.sizes;
+
+let sizeButtons = document.querySelectorAll(".sizee");
+sizeButtons.forEach(button => {
+    button.addEventListener(`click`, () => {
+
+        if (button.classList.contains("black-color-button")) {
+            button.classList.remove("black-color-button");
+            objSize.splice(objSize.indexOf(button.dataset.size), 1);
+
+        }
+        else {
+
+            button.classList.add("black-color-button");
+
+            objSize.push(button.dataset.size);
+        }
+        console.log(obj)
+
+
+        if (objClr.length == 0 && objSize.length == 0) {
+            displayProducts("category", Productdata);
+
+        }
+        else {
+
+            let filterSizes = filterData();
+
+            // let category = document.querySelector(".not")
+
+            // if (filterSizes.length == 0) {
+            //     category.classList.add("active");
+            //     category.innerHTML = "Try searching another filter.No related products found!"
+
+            // }
+            // else {
+            //     category.classList.remove("active")
+            // }
+            displayProducts("category", filterProducts);
+            console.log(filterProducts)
+
+            filterProducts = [];
+
+        }
+
+    })
+})
+
+let objClr = obj.colors;
+
+let circles = document.querySelectorAll(".circle");
+
+circles.forEach(circle => {
+
+    circle.addEventListener(`click`, () => {
+
+        if (circle.classList.contains("active")) {
+            circle.classList.remove("active");
+            objClr.splice(objClr.indexOf(circle.dataset.color), 1);
+
+        }
+        else {
+
+            circle.classList.add("active");
+
+            objClr.push(circle.dataset.color);
+        }
+        // console.log(objClr)
+
+
+
+        if (objClr.length == 0 && objSize.length == 0) {
+            displayProducts("category", Productdata);
+
+        }
+        else {
+
+            let filterClrs = filterData();
+
+            let category = document.querySelector(".not")
+
+            // if (filterClrs.length == 0) {
+            //     category.classList.add("active");
+            //     category.innerHTML = "Try searching another filter.No related products found!"
+
+            // }
+            // else {
+            //     category.classList.remove("active")
+            // }
+            displayProducts("category", filterProducts);
+
+            console.log(filterProducts)
+
+            filterProducts = [];
+
+
+        }
+
+
+    })
+
+})
+
+
+displayProducts("category", Productdata);
+
+
+function filterData() {
+let colorFilterProducts=[];
+let sizeFilterProducts=[];
+
+    let data = getData();
+    data.forEach(product => {
+        let variants = product.variants;
+
+        variants.forEach(variant => {
+            let color = (variant.color).toLowerCase();
+            let size = (variant.size).toLowerCase();
+            //   if (obj.colors.includes(color) && obj.sizes.includes(size)) {
+            //     filterProducts.push(variant);
+           
+            //     }
+            if (obj.colors.includes(color)) {
+                colorFilterProducts.push(variant);
+                console.log(colorFilterProducts)
+
+            }
+
+            else if (obj.sizes.includes(size)) {
+                sizeFilterProducts.push(variant);
+                console.log("s")
+
+            }
+            // colorFilterProducts.forEach(clrProduct=>{
+            //     let clrVariants=clrProduct.variants;
+            //     clrVariants.forEach(clrVariant=>{
+            //         let vclr=(clrVariant.color).toLowerCase();
+            //         let vsize=(clrVariant.size).toLowerCase();
+
+            //     })
+            // })
+
+        })
+    })
+  
+    // return colorFilterProducts;
+    // return sizeFilterProducts;
+    return filterProducts;
+
+}
+// console.log(filterProducts);
 
 
 
 
 
 function displayProducts(id, product) {
-    const itemWrap = document.getElementById(id);
+    let itemWrap = document.getElementById(id);
+    itemWrap.innerHTML = "";
+
     let data = product;
     // console.log(data);
     data.forEach(item => {
@@ -869,6 +1053,25 @@ function displayProducts(id, product) {
         rating.appendChild(ratingPara);
         clothItem.appendChild(starContainer);
 
+        let counter = 1;
+        for (k = 0; k < 5; k++) {
+            let ratingNumber = Math.trunc(item.rating);
+            // console.log(ratingNumber)
+            if (ratingNumber >= counter) {
+
+                const star = document.createElement('i');
+                star.classList.add("fa-solid", "fa-star");
+                stars.appendChild(star);
+            }
+            else {
+                const star = document.createElement('i');
+                star.classList.add("fa-regular", "fa-star");
+                stars.appendChild(star);
+            }
+            counter++;
+        }
+
+
         price.appendChild(priceHeading);
         // clothItem.appendChild(price);
 
@@ -888,6 +1091,8 @@ function displayProducts(id, product) {
         discount.innerHTML = "-" + Math.trunc(((item.original_price - item.selling_price) / item.original_price) * 100) + "%";
         img1.src = item.featured_image;
     })
+    // console.log(itemWrap)
+    return itemWrap;
 }
 
 
@@ -896,38 +1101,30 @@ function displayProducts(id, product) {
 function collectionType(type) {
     let data = getData();
     let filterProduct = [];
- 
-   
+
+
     data.forEach(product => {
-         let collArray=product.collection;
-        try{
+        let collArray = product.collection;
+        try {
 
-   
-        collArray.forEach(collection=>{
-        // console.log(coll);
 
-         if (collection == type) {
-            filterProduct.push(product);
-            console.log(filterProduct);
+            collArray.forEach(collection => {
+
+                if (collection == type) {
+                    filterProduct.push(product);
+                    // console.log(filterProduct);
+                }
+            })
         }
-        })
-        }
-        catch{
+        catch {
 
         }
-  
-       
+
+
     })
     return filterProduct;
 
 }
-const filterProduct = collectionType("new arrival");
-
-
-
-displayProducts("new-arrival", filterProduct);
-displayProducts("top-selling", Productdata);
-
 
 
 

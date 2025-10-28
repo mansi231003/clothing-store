@@ -149,9 +149,9 @@
                         <div class="select-heading">Select Colors</div>
 
                         <div class="colors-container">
-                            <div class="circle brown"></div>
-                            <div class="circle dark-green"></div>
-                            <div class="circle dark-blue"></div>
+                            <div class="circle brown flex-content-center"><i class="fa-solid fa-check tick"></i></div>
+                            <div class="circle dark-green flex-content-center"><i class="fa-solid fa-check tick"></i></div>
+                            <div class="circle dark-blue flex-content-center"><i class="fa-solid fa-check tick"></i></div>
                         </div>
 
                     </div>
@@ -358,7 +358,7 @@
 
             <div class="cloth-item-wrapper swiper mySwiper">
 
-                <div id="new-arrival" class="swiper-wrapper flex-space-between"> 
+                <div id="also-like" class="swiper-wrapper flex-space-between"> 
 
                 <!-- <div class="cloth-item">
                     <div class="image-container"><img class="image" src="static/image/product shirts1.png" /></div>
@@ -541,6 +541,11 @@
    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script>
+
+const filterProduct2 = collectionType("best selling");
+
+  displayProducts("also-like", filterProduct2);
+
 
           var swiper = new Swiper(".mySwiper", {
    

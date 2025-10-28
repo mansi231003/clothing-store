@@ -104,8 +104,10 @@
             <div class="bar-item">Casual</div>
         </div>
 
-        <div class="main-section flex-space-between">
-            <div class="filter-container" id="container">
+        <div class="main-section">
+            <div class="sidebar-container2" id="container2">
+
+            <div class="filter-container flex-column-content-center">
                 <div class="name flex-space-between ">
                     <h4>Filters</h4>
                     <i class="fa-solid fa-sliders grey-color filter"></i>
@@ -121,11 +123,11 @@
                 </div>
 
                 <div class="price-range flex-column-content-center border-bottom">
-                    <div class="width flex-space-between">
-                        <h4>Price</h4> <i class="fa fa-angle-up"></i>
+                    <div data-target="arrow1" class="width flex-space-between filter-dropdown">
+                        <h4>Price</h4> <i class="fa fa-angle-up arrow"></i>
                     </div>
                     <div class="line"></div>
-                    <div class="price flex-space-between">
+                    <div data-target="arrow1" class="price flex-space-between filter-section">
                         <p>$50</p>
                         <p>$200</p>
                     </div>
@@ -133,60 +135,64 @@
 
                 <div class="color-section border-bottom">
 
-                    <div class=" flex-space-between">
-                        <h4>Colors</h4> <i class="fa fa-angle-up"></i>
+                    <div data-target="arrow2" class=" flex-space-between filter-dropdown">
+                        <h4>Colors</h4> <i class="fa fa-angle-up arrow"></i>
                     </div>
 
-                    <div class="colors-container">
-                        <div class="circle green"></div>
-                        <div class="circle red"></div>
-                        <div class="circle yellow"></div>
-                        <div class="circle orange"></div>
-                        <div class="circle sky-blue"></div>
-                        <div class="circle blue flex-content-center"><i class="fa-solid fa-check"></i></div>
-                        <div class="circle purple"></div>
-                        <div class="circle pink"></div>
-                        <div class="circle white"></div>
-                        <div class="circle black"></div>
+                    <div data-target="arrow2" class="colors-container filter-section">
+                        <div class="circle green flex-content-center"  data-color="green"><i class="fa-solid fa-check tick"></i></div>
+                        <div data-color="red" class="circle red flex-content-center"><i class="fa-solid fa-check tick"></i></div>
+                        <div data-color="yellow" class="circle yellow flex-content-center"><i class="fa-solid fa-check tick"></i></div>
+                        <div data-color="orange" class="circle orange flex-content-center"><i class="fa-solid fa-check tick"></i></div>
+                        <div data-color="sky-blue" class="circle sky-blue flex-content-center"><i class="fa-solid fa-check tick"></i></div>
+                        <div data-color="blue" class="circle blue flex-content-center"><i class="fa-solid fa-check tick"></i></div>
+                        <div data-color="purple" class="circle purple flex-content-center"><i class="fa-solid fa-check tick"></i></div>
+                        <div data-color="pink" class="circle pink flex-content-center"><i class="fa-solid fa-check tick"></i></div>
+                        <div data-color="white" class="circle white flex-content-center"><i class="fa-solid fa-check tick"></i></div>
+                        <div data-color="black" class="circle black flex-content-center"><i class="fa-solid fa-check tick"></i></div>
 
                     </div>
 
                 </div>
 
                 <div class="size-section">
-                    <div class="name flex-space-between">
-                        <h4>Size</h4> <i class="fa fa-angle-up"></i>
+                    <div data-target="arrow3" class="name flex-space-between filter-dropdown">
+                        <h4>Size</h4> <i class="fa fa-angle-up arrow"></i>
                     </div>
 
-                    <div class="choose-size">
-                        <div class="button-shape flex-content-center">XX-Small</div>
-                        <div class="button-shape flex-content-center">X-Small</div>
-                        <div class="button-shape flex-content-center ">Small</div>
-                        <div class="button-shape flex-content-center">Medium</div>
-                        <div class="button-shape flex-content-center black-color-button">Large</div>
-                        <div class="button-shape flex-content-center">X-Large</div>
-                        <div class="button-shape flex-content-center ">XX-Large</div>
-                        <div class="button-shape flex-content-center">3X-Large</div>
-                        <div class="button-shape flex-content-center">4X-Large</div>
+                    <div data-target="arrow3" class="choose-size filter-section">
+                        <div data-size="xx-s" class="button-shape flex-content-center sizee">XX-Small</div>
+                        <div data-size="x-s" class="button-shape flex-content-center sizee">X-Small</div>
+                        <div data-size="s" class="button-shape flex-content-center sizee">Small</div>
+                        <div data-size="m" class="button-shape flex-content-center sizee">Medium</div>
+                        <div data-size="l" class="button-shape flex-content-center sizee">Large</div>
+                        <div data-size="x-l" class="button-shape flex-content-center sizee">X-Large</div>
+                        <div data-size="xx-l" class="button-shape flex-content-center sizee">XX-Large</div>
+                        <div data-size="3x-l" class="button-shape flex-content-center sizee">3X-Large</div>
+                        <div data-size="4x-l" class="button-shape flex-content-center sizee">4X-Large</div>
 
                     </div>
 
                 </div>
 
                 <div class="dress-style flex-column-content-center border-top">
-                    <div class="width flex-space-between">
-                        <h4>Dress Style</h4> <i class="fa fa-angle-up"></i>
+                    <div data-target="arrow4" class="width flex-space-between filter-dropdown">
+                        <h4>Dress Style</h4> <i class="fa fa-angle-up arrow"></i>
                     </div>
 
-                    <div class="cloth-names-container flex-column-content-center">
+                    <div data-target="arrow4" class="cloth-names-container flex-column-content-center filter-section">
                         <div class="width flex-space-between grey-color">Casual <i class="fa fa-angle-right"></i></div>
                         <div class="width flex-space-between grey-color">Formal <i class="fa fa-angle-right"></i></div>
                         <div class="width flex-space-between grey-color">Party <i class="fa fa-angle-right"></i></div>
                         <div class="width flex-space-between grey-color">Gym <i class="fa fa-angle-right"></i></div>
                     </div>
-                    <div class="button-shape flex-content-center black-color-button">Apply Filter</div>
 
                 </div>
+                    <div class="button-shape flex-content-center black-color-button">Apply Filter</div>
+
+                
+            </div>
+            <div class="sidebar-overlay2 filter-button"></div>
             </div>
 
 
@@ -204,13 +210,14 @@
                     </div>
                 </div>
 
-                <div class="cloth-section" id="new-arrival">
+                <div class="cloth-section" id="category">
 
 
                 </div>
+                <div class="not grey-color"></div>
 
 
-                <div class="last-container flex-space-between border-top">
+                <!-- <div class="last-container flex-space-between border-top">
 
                     <div class="button"><i class="fa-solid fa-arrow-left"></i>Previous</div>
                     <div class="numbers flex-space-between grey-color">
@@ -224,7 +231,7 @@
                     </div>
                     <div class="button">Next<i class="fa-solid fa-arrow-right"></i></div>
 
-                </div>
+                </div> -->
 
 
             </div>
@@ -322,6 +329,9 @@
     </div>
 
     <script src="static/js/script.js"></script>
+    <script>
+
+    </script>
 </body>
 
 </html>

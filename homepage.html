@@ -425,6 +425,15 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script>
+
+        const filterProduct = collectionType("new arrival");
+const filterProduct1 = collectionType("top selling");
+
+
+
+displayProducts("new-arrival", filterProduct);
+displayProducts("top-selling", filterProduct1);
+
         var swiper = new Swiper(".mySwiper", {
             // slidesPerView: 3,
             spaceBetween: 15,
