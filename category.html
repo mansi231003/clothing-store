@@ -18,7 +18,7 @@
 <body>
     <div class="flex-column-content-center cart-container">
 
-            <div class="sidebar-container" id="container">
+        <div class="sidebar-container" id="container">
 
             <ul class="sidebar-menu">
 
@@ -59,10 +59,12 @@
 
         <div class="navbar-container flex-content-center">
 
-           
-            <div class="shop"> <div class="side-button">
-                <button class="sidebar-toggler"><i class="fa-solid fa-bars"></i></button>
-            </div>SHOP.CO</div>
+
+            <div class="shop">
+                <div class="side-button">
+                    <button class="sidebar-toggler"><i class="fa-solid fa-bars"></i></button>
+                </div>SHOP.CO
+            </div>
             <div class="navmenu-container">
                 <ul class="navbar-menu flex-content-center">
 
@@ -107,92 +109,87 @@
         <div class="main-section">
             <div class="sidebar-container2" id="container2">
 
-            <div class="filter-container flex-column-content-center">
-                <div class="name flex-space-between ">
-                    <h4>Filters</h4>
-                    <i class="fa-solid fa-sliders grey-color filter"></i>
-                    <i class="fa-solid fa-xmark grey-color cross filter-button"></i>
+                <div class="filter-container flex-column-content-center">
+                    <div class="name flex-space-between border-bottom">
+                        <h4>Filters</h4>
+                        <i class="fa-solid fa-sliders grey-color filter"></i>
+                        <i class="fa-solid fa-xmark grey-color cross filter-button"></i>
+                    </div>
+
+                    <div class="filter-search-bar">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input class="filter-search" type="text" id="filter-search" placeholder=" Search for products">
+                    </div>
+
+                    <div class="price-range flex-column-content-center border-bottom border-top">
+                        <div data-target="arrow1" class="width flex-space-between filter-dropdown">
+                            <h4>Price</h4> <i class="fa fa-angle-up arrow"></i>
+                        </div>
+                        <div data-target="arrow1" class="price flex-space-between filter-section">
+                            <input class="range" type="range" min="0" max="5000" value="50">
+                            <output id="output">$0</output>
+                        </div>
+                    </div>
+
+                    <div class="color-section border-bottom">
+
+                        <div data-target="arrow2" class=" flex-space-between filter-dropdown">
+                            <h4>Colors</h4> <i class="fa fa-angle-up arrow"></i>
+                        </div>
+
+                        <div data-target="arrow2" class="colors-container filter-section">
+                            <div class="circle green flex-content-center" data-color="green"><i
+                                    class="fa-solid fa-check tick"></i></div>
+                            <div data-color="red" class="circle red flex-content-center"><i
+                                    class="fa-solid fa-check tick"></i></div>
+                            <div data-color="yellow" class="circle yellow flex-content-center"><i
+                                    class="fa-solid fa-check tick"></i></div>
+                            <div data-color="orange" class="circle orange flex-content-center"><i
+                                    class="fa-solid fa-check tick"></i></div>
+                            <div data-color="sky-blue" class="circle sky-blue flex-content-center"><i
+                                    class="fa-solid fa-check tick"></i></div>
+                            <div data-color="blue" class="circle blue flex-content-center"><i
+                                    class="fa-solid fa-check tick"></i></div>
+                            <div data-color="purple" class="circle purple flex-content-center"><i
+                                    class="fa-solid fa-check tick"></i></div>
+                            <div data-color="pink" class="circle pink flex-content-center"><i
+                                    class="fa-solid fa-check tick"></i></div>
+                            <div data-color="white" class="circle white flex-content-center"><i
+                                    class="fa-solid fa-check tick"></i></div>
+                            <div data-color="black" class="circle black flex-content-center"><i
+                                    class="fa-solid fa-check tick"></i></div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="size-section">
+                        <div data-target="arrow3" class="name flex-space-between filter-dropdown">
+                            <h4>Size</h4> <i class="fa fa-angle-up arrow"></i>
+                        </div>
+
+                        <div data-target="arrow3" class="choose-size filter-section">
+                            <div data-size="xx-s" class="button-shape flex-content-center sizee">XX-Small</div>
+                            <div data-size="x-s" class="button-shape flex-content-center sizee">X-Small</div>
+                            <div data-size="s" class="button-shape flex-content-center sizee">Small</div>
+                            <div data-size="m" class="button-shape flex-content-center sizee">Medium</div>
+                            <div data-size="l" class="button-shape flex-content-center sizee">Large</div>
+                            <div data-size="x-l" class="button-shape flex-content-center sizee">X-Large</div>
+                            <div data-size="xx-l" class="button-shape flex-content-center sizee">XX-Large</div>
+                            <div data-size="3x-l" class="button-shape flex-content-center sizee">3X-Large</div>
+                            <div data-size="4x-l" class="button-shape flex-content-center sizee">4X-Large</div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div id="reset-button" class="button-shape flex-content-center black-color-button">Reset Filter
+                    </div>
+
+
                 </div>
-
-                <div class="cloth-names-container flex-column-content-center border-top border-bottom">
-                    <div class="width flex-space-between grey-color">T-shirts <i class="fa fa-angle-right"></i></div>
-                    <div class="width flex-space-between grey-color">Shorts <i class="fa fa-angle-right"></i></div>
-                    <div class="width flex-space-between grey-color">Shirts <i class="fa fa-angle-right"></i></div>
-                    <div class="width flex-space-between grey-color">Hoodie <i class="fa fa-angle-right"></i></div>
-                    <div class="width flex-space-between grey-color">Jeans <i class="fa fa-angle-right"></i></div>
-                </div>
-
-                <div class="price-range flex-column-content-center border-bottom">
-                    <div data-target="arrow1" class="width flex-space-between filter-dropdown">
-                        <h4>Price</h4> <i class="fa fa-angle-up arrow"></i>
-                    </div>
-                    <div class="line"></div>
-                    <div data-target="arrow1" class="price flex-space-between filter-section">
-                        <p>$50</p>
-                        <p>$200</p>
-                    </div>
-                </div>
-
-                <div class="color-section border-bottom">
-
-                    <div data-target="arrow2" class=" flex-space-between filter-dropdown">
-                        <h4>Colors</h4> <i class="fa fa-angle-up arrow"></i>
-                    </div>
-
-                    <div data-target="arrow2" class="colors-container filter-section">
-                        <div class="circle green flex-content-center"  data-color="green"><i class="fa-solid fa-check tick"></i></div>
-                        <div data-color="red" class="circle red flex-content-center"><i class="fa-solid fa-check tick"></i></div>
-                        <div data-color="yellow" class="circle yellow flex-content-center"><i class="fa-solid fa-check tick"></i></div>
-                        <div data-color="orange" class="circle orange flex-content-center"><i class="fa-solid fa-check tick"></i></div>
-                        <div data-color="sky-blue" class="circle sky-blue flex-content-center"><i class="fa-solid fa-check tick"></i></div>
-                        <div data-color="blue" class="circle blue flex-content-center"><i class="fa-solid fa-check tick"></i></div>
-                        <div data-color="purple" class="circle purple flex-content-center"><i class="fa-solid fa-check tick"></i></div>
-                        <div data-color="pink" class="circle pink flex-content-center"><i class="fa-solid fa-check tick"></i></div>
-                        <div data-color="white" class="circle white flex-content-center"><i class="fa-solid fa-check tick"></i></div>
-                        <div data-color="black" class="circle black flex-content-center"><i class="fa-solid fa-check tick"></i></div>
-
-                    </div>
-
-                </div>
-
-                <div class="size-section">
-                    <div data-target="arrow3" class="name flex-space-between filter-dropdown">
-                        <h4>Size</h4> <i class="fa fa-angle-up arrow"></i>
-                    </div>
-
-                    <div data-target="arrow3" class="choose-size filter-section">
-                        <div data-size="xx-s" class="button-shape flex-content-center sizee">XX-Small</div>
-                        <div data-size="x-s" class="button-shape flex-content-center sizee">X-Small</div>
-                        <div data-size="s" class="button-shape flex-content-center sizee">Small</div>
-                        <div data-size="m" class="button-shape flex-content-center sizee">Medium</div>
-                        <div data-size="l" class="button-shape flex-content-center sizee">Large</div>
-                        <div data-size="x-l" class="button-shape flex-content-center sizee">X-Large</div>
-                        <div data-size="xx-l" class="button-shape flex-content-center sizee">XX-Large</div>
-                        <div data-size="3x-l" class="button-shape flex-content-center sizee">3X-Large</div>
-                        <div data-size="4x-l" class="button-shape flex-content-center sizee">4X-Large</div>
-
-                    </div>
-
-                </div>
-
-                <div class="dress-style flex-column-content-center border-top">
-                    <div data-target="arrow4" class="width flex-space-between filter-dropdown">
-                        <h4>Dress Style</h4> <i class="fa fa-angle-up arrow"></i>
-                    </div>
-
-                    <div data-target="arrow4" class="cloth-names-container flex-column-content-center filter-section">
-                        <div class="width flex-space-between grey-color">Casual <i class="fa fa-angle-right"></i></div>
-                        <div class="width flex-space-between grey-color">Formal <i class="fa fa-angle-right"></i></div>
-                        <div class="width flex-space-between grey-color">Party <i class="fa fa-angle-right"></i></div>
-                        <div class="width flex-space-between grey-color">Gym <i class="fa fa-angle-right"></i></div>
-                    </div>
-
-                </div>
-                    <div class="button-shape flex-content-center black-color-button">Apply Filter</div>
-
-                
-            </div>
-            <div class="sidebar-overlay2 filter-button"></div>
+                <div class="sidebar-overlay2 filter-button"></div>
             </div>
 
 
@@ -205,7 +202,7 @@
                         <p class="grey-color sort">Sort by:</p>
                         <p class="sort">Most Popular <i class="fa fa-angle-down"></i></p>
                         <div class="select filter-button">
-                    <i class="fa-solid fa-sliders filter"></i>
+                            <i class="fa-solid fa-sliders filter"></i>
                         </div>
                     </div>
                 </div>
@@ -329,9 +326,9 @@
     </div>
 
     <script src="static/js/script.js"></script>
-    <script>
+    <script src="static/js/filter.js"></script>
+    <script>displayProducts("category",Productdata)</script>
 
-    </script>
 </body>
 
 </html>
