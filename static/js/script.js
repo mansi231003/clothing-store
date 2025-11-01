@@ -75,16 +75,6 @@ const Productdata = [
         "stock": "15",
         "variants": [
             {
-                "id": "13456734-1",
-                "title": "T-shirt with Tape Details",
-                "size": "M",
-                "color": "Green",
-                "original_price": "400",
-                "selling_price": "300",
-                "featured_image": "static/image/green tshirt.png",
-                "rating": "4.5"
-            },
-            {
                 "id": "13456734-2",
                 "title": "T-shirt with Tape Details",
                 "size": "L",
@@ -95,6 +85,16 @@ const Productdata = [
                 "rating": "4.3"
             },
             {
+                "id": "13456734-1",
+                "title": "T-shirt with Tape Details",
+                "size": "M",
+                "color": "Green",
+                "original_price": "400",
+                "selling_price": "300",
+                "featured_image": "static/image/green tshirt.png",
+                "rating": "4.5"
+            },
+            {
                 "id": "13456734-3",
                 "title": "T-shirt with Tape Details",
                 "size": "XL",
@@ -103,7 +103,8 @@ const Productdata = [
                 "selling_price": "350",
                 "featured_image": "static/image/orange tshirt.png",
                 "rating": "4.6"
-            }
+            },
+
         ]
     },
     {
@@ -828,6 +829,11 @@ const Productdata = [
 
 
 
+function getData() {
+
+    return Productdata;
+
+}
 
 
 

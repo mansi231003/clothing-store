@@ -794,16 +794,10 @@ body.no-scroll {
     cursor: pointer;
 }
 
-.black-color-button,.sizee.active {
+.black-color-button,.sizee.active,.size.active {
     background-color: black;
     color: white;
 }
-
-.size.active{
-      background-color: black;
-    color: white;
-}
-
 
 /* product css */
 

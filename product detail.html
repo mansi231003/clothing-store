@@ -112,21 +112,23 @@
 
                 </ul>
             </div>
+
+
             <div class="hero-section-container">
 
                 <div class="t-shirt-container">
                     <div class="column-t-shirts-container">
-                        <div class="column-t-shirt"><img class="t-shirt-image" src="static/image/image 2.png" /></div>
-                        <div class="column-t-shirt"><img class="t-shirt-image" src="static/image/image 5.png" /></div>
-                        <div class="column-t-shirt"><img class="t-shirt-image" src="static/image/image 6.png" /></div>
+                        <!-- <div class="column-t-shirt"><img class="t-shirt-image"/></div> -->
+                        <!-- <div class="column-t-shirt"><img class="t-shirt-image"/></div> -->
+                        <!-- <div class="column-t-shirt"><img class="t-shirt-image" /></div> -->
                     </div>
                     <div class="huge-t-shirt">
-                        <img class="t-shirt-image" src="static/image/image 1.png" />
+                        <img id="main-image" class="t-shirt-image"/>
                     </div>
                 </div>
 
                 <div class="t-shirt-details">
-                    <h1 class="heading">ONE LIFE GRAPHIC T-SHIRT</h1>
+                    <h1 id="product-name" class="heading"></h1>
                     <div class="stars-container">
                         <div class="stars">
                             <i class="fa-solid fa-star"></i>
@@ -139,9 +141,9 @@
                         </div>
                     </div>
                     <div class="price">
-                        <h5>$260</h5>
-                        <h5 class="grey-color"><s>$300</s></h5>
-                        <div class="discount flex-content-center">-40%</div>
+                        <h5 id="selling-price"></h5>
+                        <h5 class="grey-color"><s id="original-price"></s></h5>
+                        <div id="discount" class="discount flex-content-center">-40%</div>
                     </div>
                     <div class="para">This graphic t-shirt which is perfect for any occasion. Crafted from a soft and
                         breathable fabric, it offers superior comfort and style.</div>
@@ -151,11 +153,11 @@
                         <div class="select-heading">Select Colors</div>
 
                         <div class="colors-container">
-                            <div class="circle brown flex-content-center"><i class="fa-solid fa-check tick"></i></div>
+                            <!-- <div class="circle brown flex-content-center"><i class="fa-solid fa-check tick"></i></div>
                             <div class="circle dark-green flex-content-center"><i class="fa-solid fa-check tick"></i>
                             </div>
                             <div class="circle dark-blue flex-content-center"><i class="fa-solid fa-check tick"></i>
-                            </div>
+                            </div> -->
                         </div>
 
                     </div>
@@ -164,10 +166,10 @@
                         <div class="select-heading">Choose Size</div>
 
                         <div class="size-container">
-                            <div class="button-shape flex-content-center size">Small</div>
-                            <div class="button-shape flex-content-center size">Medium</div>
-                            <div class="button-shape flex-content-center size">Large</div>
-                            <div class="button-shape flex-content-center size">X-Large</div>
+                            <div class="button-shape flex-content-center">Small</div>
+                            <div class="button-shape flex-content-center">Medium</div>
+                            <div class="button-shape flex-content-center">Large</div>
+                            <div class="button-shape flex-content-center">X-Large</div>
                         </div>
 
                     </div>
@@ -461,13 +463,11 @@
 
 
     <script src="static/js/script.js"></script>
+    <script src="static/js/productpage.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script>
-
-        const filterProduct2 = collectionType("best selling");
-        displayProducts("also-like", filterProduct2);
-
+     
         var swiper = new Swiper(".mySwiper", {
 
             spaceBetween: 15,
@@ -491,7 +491,7 @@
         });
 
 
-        
+
 
     </script>
 

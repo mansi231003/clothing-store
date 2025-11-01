@@ -57,11 +57,6 @@ let sizeFilterProducts = [];
 let priceFilterProducts = [];
 let searchFilterProducts = [];
 
-function getData() {
-
-    return Productdata;
-
-}
 
 
 
