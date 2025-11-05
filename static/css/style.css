@@ -794,7 +794,7 @@ body.no-scroll {
     cursor: pointer;
 }
 
-.black-color-button,.sizee.active,.size.active {
+.black-color-button,.sizee.active,.button-shape.active {
     background-color: black;
     color: white;
 }
@@ -802,7 +802,9 @@ body.no-scroll {
 /* product css */
 
 
-
+.form{
+    display: none;
+}
 
 
 .product-detail-container .hero-section {
@@ -1290,6 +1292,7 @@ output{
 .fa-check {
     display: none !important;
 }
+
 
 .circle.active .fa-check {
     display: block !important;

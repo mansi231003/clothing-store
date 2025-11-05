@@ -166,19 +166,19 @@
                         <div class="select-heading">Choose Size</div>
 
                         <div class="size-container">
-                            <div class="button-shape flex-content-center">Small</div>
-                            <div class="button-shape flex-content-center">Medium</div>
+                            <!-- <div class="button-shape flex-content-center"></div> -->
+                            <!-- <div class="button-shape flex-content-center">Medium</div>
                             <div class="button-shape flex-content-center">Large</div>
-                            <div class="button-shape flex-content-center">X-Large</div>
+                            <div class="button-shape flex-content-center">X-Large</div> -->
                         </div>
 
                     </div>
 
                     <div class="buttons-container">
                         <div class="button-shape flex-content-center button-width">
-                            <h5 class="quantity flex-content-center"><i class="fa-solid fa-minus"></i></h5>
-                            <h5 class="quantity flex-content-center">1</h5>
-                            <h5 class="quantity flex-content-center"><i class="fa-solid fa-plus"></i></h5>
+                            <h5 class="quantity flex-content-center minus"><i class="fa-solid fa-minus"></i></h5>
+                            <h5 id="quantity" class="quantity flex-content-center"></h5>
+                            <h5 class="quantity flex-content-center add"><i class="fa-solid fa-plus"></i></h5>
                         </div>
                         <div class="button-shape flex-content-center black-color-button">Add to Cart</div>
                     </div>
@@ -304,7 +304,7 @@
 
             </div>
 
-            <div class="review-container display-none">
+            <div id="review" class="review-container display-none">
                 <div class="customer-feedback">
                     <div class="star-container">
                         <div class="stars">
@@ -460,6 +460,12 @@
         </div>
 
     </div>
+
+    <form class="form" id="form">
+          <input id="id-input" type="text" >
+          <input id="size-input" type="text">
+    </form>
+  
 
 
     <script src="static/js/script.js"></script>

@@ -75,9 +75,9 @@ const Productdata = [
         "stock": "15",
         "variants": [
             {
-                "id": "13456734-2",
+                "id": "13456734-1",
                 "title": "T-shirt with Tape Details",
-                "size": "L",
+                "size": ["L","S"],
                 "color": "Black",
                 "original_price": "450",
                 "selling_price": "320",
@@ -85,9 +85,9 @@ const Productdata = [
                 "rating": "4.3"
             },
             {
-                "id": "13456734-1",
+                "id": "13456734-2",
                 "title": "T-shirt with Tape Details",
-                "size": "M",
+                "size": ["M"],
                 "color": "Green",
                 "original_price": "400",
                 "selling_price": "300",
@@ -97,7 +97,7 @@ const Productdata = [
             {
                 "id": "13456734-3",
                 "title": "T-shirt with Tape Details",
-                "size": "XL",
+                "size": ["XL","L"],
                 "color": "Orange",
                 "original_price": "480",
                 "selling_price": "350",
