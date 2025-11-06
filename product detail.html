@@ -119,11 +119,9 @@
                 <div class="t-shirt-container">
                     <div class="column-t-shirts-container">
                         <!-- <div class="column-t-shirt"><img class="t-shirt-image"/></div> -->
-                        <!-- <div class="column-t-shirt"><img class="t-shirt-image"/></div> -->
-                        <!-- <div class="column-t-shirt"><img class="t-shirt-image" /></div> -->
                     </div>
                     <div class="huge-t-shirt">
-                        <img id="main-image" class="t-shirt-image"/>
+                        <img id="main-image" class="t-shirt-image" />
                     </div>
                 </div>
 
@@ -154,8 +152,6 @@
 
                         <div class="colors-container">
                             <!-- <div class="circle brown flex-content-center"><i class="fa-solid fa-check tick"></i></div>
-                            <div class="circle dark-green flex-content-center"><i class="fa-solid fa-check tick"></i>
-                            </div>
                             <div class="circle dark-blue flex-content-center"><i class="fa-solid fa-check tick"></i>
                             </div> -->
                         </div>
@@ -167,9 +163,6 @@
 
                         <div class="size-container">
                             <!-- <div class="button-shape flex-content-center"></div> -->
-                            <!-- <div class="button-shape flex-content-center">Medium</div>
-                            <div class="button-shape flex-content-center">Large</div>
-                            <div class="button-shape flex-content-center">X-Large</div> -->
                         </div>
 
                     </div>
@@ -180,7 +173,13 @@
                             <h5 id="quantity" class="quantity flex-content-center"></h5>
                             <h5 class="quantity flex-content-center add"><i class="fa-solid fa-plus"></i></h5>
                         </div>
-                        <div class="button-shape flex-content-center black-color-button">Add to Cart</div>
+                        <form class="form" id="form">
+                            <input id="id-input" type="hidden">
+                            <input id="size-input" type="hidden">
+                            <input id="quantity-input" type="hidden">
+                            <button id="add-to-cart" class="button-shape flex-content-center black-color-button">Add to Cart
+                            </button>
+                        </form>
                     </div>
 
                 </div>
@@ -461,11 +460,8 @@
 
     </div>
 
-    <form class="form" id="form">
-          <input id="id-input" type="text" >
-          <input id="size-input" type="text">
-    </form>
-  
+
+
 
 
     <script src="static/js/script.js"></script>
@@ -473,7 +469,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script>
-     
+
         var swiper = new Swiper(".mySwiper", {
 
             spaceBetween: 15,

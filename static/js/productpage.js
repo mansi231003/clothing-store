@@ -16,11 +16,70 @@ const sizee = document.querySelector(".button-shape")
 const form = document.getElementById("form");
 const idInput = document.getElementById("id-input");
 const sizeInput = document.getElementById("size-input");
-const add=document.querySelector(".add");
-const minus=document.querySelector(".minus");
-const quantity=document.getElementById("quantity");
+const quantityInput = document.getElementById("quantity-input");
+const plus = document.querySelector(".add");
+const minus = document.querySelector(".minus");
+const quantity = document.getElementById("quantity");
 
 
+let number = quantity.innerHTML = 1;
+
+plus.addEventListener(`click`, () => {
+    if (number < Productdata[0].stock)
+        quantity.innerHTML = number += 1;
+    quantityInput.value = number;
+
+
+})
+
+minus.addEventListener(`click`, () => {
+    if (number > 1) {
+        quantity.innerHTML = number -= 1;
+        quantityInput.value = number;
+
+    }
+})
+
+
+form.addEventListener(`submit`, () => {
+
+    let details = {
+        "id": idInput.value,
+        "size": sizeInput.value,
+        "quantity": quantityInput.value
+    }
+    event.preventDefault();
+    let selectedData = JSON.stringify(details);
+    console.log(selectedData);
+
+})
+
+
+
+function size(num) {
+    variants[num].size.forEach(size => {
+        const sizeDiv = document.createElement('div');
+        sizeDiv.classList.add("button-shape", "flex-content-center");
+        sizeContainer.appendChild(sizeDiv);
+        sizeDiv.innerHTML = size;
+
+        sizeDiv.addEventListener(`click`, () => {
+            sizeInput.value = size;
+
+            const activesize = document.querySelector(".button-shape.active");
+            if (activesize == null) {
+                sizeDiv.classList.add("active")
+
+            }
+            else {
+                activesize.classList.remove("active")
+                sizeDiv.classList.add("active")
+
+            }
+
+        })
+    })
+}
 
 
 const colorsCode = {
@@ -30,19 +89,7 @@ const colorsCode = {
 }
 
 for (let i = 0; i < variants.length; i++) {
-let number= quantity.innerHTML=1;
 
-    add.addEventListener(`click`,()=>{
-   quantity.innerHTML=number+=1;
-    console.log(number)
-
-})
-minus.addEventListener(`click`,()=>{
-    if(number>1){
-   quantity.innerHTML=number-=1;
-    }
-
-})
 
     mainImage.src = variants[0].featured_image;
     productName.innerHTML = variants[0].title + `(${variants[0].color})`;
@@ -84,32 +131,7 @@ minus.addEventListener(`click`,()=>{
     if (i == 0) {
         colors.classList.add("active")
         idInput.value = variants[i].id;
-        console.log(idInput.value)
-
-        variants[i].size.forEach(size => {
-            const sizeDiv = document.createElement('div');
-            sizeDiv.classList.add("button-shape", "flex-content-center");
-            sizeContainer.appendChild(sizeDiv);
-            sizeDiv.innerHTML = size;
-
-            sizeDiv.addEventListener(`click`, () => {
-                sizeInput.value = size;
-
-                const activesize = document.querySelector(".button-shape.active");
-                if (activesize == null) {
-                    sizeDiv.classList.add("active")
-
-                }
-                else {
-                    activesize.classList.remove("active")
-                    sizeDiv.classList.add("active")
-
-                    console.log(activesize);
-                }
-
-            })
-
-        })
+        size(i);
 
     }
 
@@ -118,74 +140,26 @@ minus.addEventListener(`click`,()=>{
 
         sizeContainer.innerHTML = "";
 
-        variants[i].size.forEach(size => {
-            const sizeDiv = document.createElement('div');
-            sizeDiv.classList.add("button-shape", "flex-content-center");
-            sizeContainer.appendChild(sizeDiv);
-            sizeDiv.innerHTML = size;
+        size(i);
 
-            sizeDiv.addEventListener(`click`, () => {
-                sizeInput.value = size;
-                console.log(sizeInput.value)
-
-                const activesize = document.querySelector(".button-shape.active");
-                if (activesize == null) {
-                    sizeDiv.classList.add("active")
-
-                }
-                else {
-                    activesize.classList.remove("active")
-                    sizeDiv.classList.add("active")
-
-                }
-            })
-        })
-
-
-        mainImage.src = image.src;
         const activeColor = document.querySelector(".circle.active");
-
         activeColor.classList.remove("active");
 
         colors.classList.add("active")
 
+        mainImage.src = image.src;
         productName.innerHTML = variants[i].title + `(${variants[i].color})`;
         originalPrice.innerHTML = "$" + variants[i].original_price;
         sellingPrice.innerHTML = "$" + variants[i].selling_price;
         discount.innerHTML = "-" + Math.trunc(((variants[i].original_price - variants[i].selling_price) / variants[i].original_price) * 100) + "%";
 
         idInput.value = variants[i].id;
-        console.log(idInput.value)
+
     })
-
-
-    // let variantsColor = `<div class=" ${i == 0 ? "circle active" : "circle"}  flex-content-center" data-title='${variants[i].color} ${variants[i].title}' data-sprice=${variants[i].selling_price} data-oprice=${variants[i].original_price} data-target=${variants[i].id} style="background-color:${colorsCode[variants[i].color.toLowerCase()]}"><i class="fa-solid fa-check tick"></i></div>`;
-    // colorsContainer.innerHTML += variantsColor;
-
 
 
 }
 
-
-// const circles = document.querySelectorAll(".circle")
-
-// circles.forEach(circle => {
-
-//     circle.addEventListener(`click`, () => {
-//         const activeColor = document.querySelector(".circle.active");
-//         activeColor.classList.remove("active");
-//         circle.classList.add("active");
-
-//         const matchImg = document.querySelector(`[data-id="${circle.dataset.target}"]`);
-//         mainImage.src = matchImg.src;
-
-//         originalPrice.innerHTML = `$${circle.dataset.oprice}`;
-//         sellingPrice.innerHTML = `$${circle.dataset.sprice}`;
-//         productName.innerHTML = `${circle.dataset.title}`;
-//         discount.innerHTML = "-" + Math.trunc(((circle.dataset.oprice - circle.dataset.sprice) / circle.dataset.oprice) * 100) + "%";
-
-//     })
-// })
 
 
 

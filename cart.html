@@ -105,8 +105,8 @@
             <h1 class="heading">YOUR CART</h1>
             <div class="hero-section-container">
 
-                <div class="sub-container">
-                    <div class="cloths-cart border-bottom">
+                <div id="product-container" class="sub-container">
+                    <!-- <div class="cloths-cart">
                         <div class="image-container">
                             <img class="image" src="static/image/product shirt2.png" />
                         </div>
@@ -130,79 +130,27 @@
 
                         </div>
 
-                    </div>
-
-                    <div class="cloths-cart border-bottom">
-                        <div class="image-container">
-                            <img class="image" src="static/image/check shirt.png" />
-                        </div>
-                        <div class="cloth-details">
-                            <h4 class="name">Checkered Shirt</h4>
-                            <div class="category">Size:<p>Medium</p>
-                            </div>
-                            <div class="category">Color:<p>Red</p>
-                            </div>
-                            <h5 class="font-size">$180</h5>
-
-                        </div>
-                        <div class="trash-container">
-                            <i class="fa-solid fa-trash-can"></i>
-
-                            <div class="button-shape flex-content-center flex-space-between">
-                                <h5 class="quantity"><i class="fa-solid fa-minus"></i></h5>
-                                <h5 class="quantity">1</h5>
-                                <h5 class="quantity"><i class="fa-solid fa-plus"></i></h5>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <div class="cloths-cart">
-                        <div class="image-container">
-                            <img class="image" src="static/image/jean.png" />
-                        </div>
-                        <div class="cloth-details">
-                            <h4 class="name">Skinny Fit Jeans</h4>
-                            <div class="category">Size:<p>Large</p>
-                            </div>
-                            <div class="category">Color:<p>Blue</p>
-                            </div>
-                            <h5 class="font-size">$240</h5>
-
-                        </div>
-                        <div class="trash-container">
-                            <i class="fa-solid fa-trash-can"></i>
-
-                            <div class="button-shape flex-content-center flex-space-between">
-                                <h5 class="quantity"><i class="fa-solid fa-minus"></i></h5>
-                                <h5 class="quantity">1</h5>
-                                <h5 class="quantity"><i class="fa-solid fa-plus"></i></h5>
-                            </div>
-
-                        </div>
-
-                    </div>
+                    </div> -->            
 
                 </div>
 
                 <div class="sub-container">
                     <h3 class="name">Order Summary</h3>
                     <div class="total">
-                        <p>Subtotal</p>
-                        <h5 class="font-size">$565</h5>
+                        <p >Subtotal</p>
+                        <h5 id="sub-total" class="font-size"></h5>
                     </div>
-                    <div class="total">
+                    <!-- <div class="total">
                         <p>Discount(-20%)</p>
                         <h5 class="font-size red-color">-$113</h5>
-                    </div>
+                    </div> -->
                     <div class="total border-bottom">
                         <p>Delivery Fee</p>
-                        <h5 class="font-size">$15</h5>
+                        <h5 id="delivery-fee" class="font-size"></h5>
                     </div>
                     <div class="total">
                         <p>Total</p>
-                        <h5 class="font-size">$467</h5>
+                        <h5 id="total" class="font-size"></h5>
                     </div>
 
                     <div class="buttons-container">
@@ -309,6 +257,8 @@
         <div>
 
             <script src="static/js/script.js"></script>
+            <!-- <script src="static/js/productpage.js"></script> -->
+            <script src="static/js/cart.js"></script>
 
 </body>
 
