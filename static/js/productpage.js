@@ -101,9 +101,9 @@ for (let i = 0; i < variants.length; i++) {
     const columnTshirt = document.createElement('div');
     const image = document.createElement('img');
 
-    columnTshirt.classList.add("column-t-shirt");
+    columnTshirt.classList.add("column-t-shirt","width-100");
     image.dataset.id = variants[i].id;
-    image.classList.add("t-shirt-image");
+    image.classList.add("t-shirt-image","width-100");
 
     columnTshirt.appendChild(image);
     variantsContainer.appendChild(columnTshirt);
@@ -120,7 +120,7 @@ for (let i = 0; i < variants.length; i++) {
     const colors = document.createElement('div');
     const Itag = document.createElement('i');
 
-    colors.classList.add("circle", "flex-content-center")
+    colors.classList.add("circle", "flex-content-center","width-100")
     Itag.classList.add("fa-solid", "fa-check", "tick");
     colors.style.backgroundColor = `${colorsCode[variants[i].color.toLowerCase()]}`;
     colors.appendChild(Itag);
@@ -159,10 +159,6 @@ for (let i = 0; i < variants.length; i++) {
 
 
 }
-
-
-
-
 
 
 

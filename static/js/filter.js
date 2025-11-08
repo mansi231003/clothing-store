@@ -1,4 +1,3 @@
-
 const filterButtons = document.querySelectorAll('.filter-button');
 const filterContainer = document.getElementById("container2");
 
@@ -19,6 +18,8 @@ filterButtons.forEach(filterButton => {
 })
 
 
+
+// Dropdowns to open filter sections...!
 
 const filterDropdowns = document.querySelectorAll('.filter-dropdown');
 const filterSections = document.querySelectorAll('.filter-section');
@@ -42,7 +43,6 @@ filterDropdowns.forEach(filterDropdown => {
 
 
 
-
 const obj = {
     colors: [],
     sizes: [],
@@ -50,7 +50,6 @@ const obj = {
     search: []
 }
 
-// displayProducts("category", Productdata);
 
 let colorFilterProducts = [];
 let sizeFilterProducts = [];
@@ -59,6 +58,7 @@ let searchFilterProducts = [];
 
 
 
+// To select the size of products...!
 
 let sizeButtons = document.querySelectorAll(".sizee");
 sizeButtons.forEach(button => {
@@ -78,24 +78,14 @@ sizeButtons.forEach(button => {
             displayProducts("category", Productdata);
         }
         else {
-
-             filterData();
-            // let category = document.querySelector(".not")
-
-            // if (filterSizes.length == 0) {
-            //     category.classList.add("active");
-            //     category.innerHTML = "Try searching another filter.No related products found!"
-
-            // }
-            // else {
-            //     category.classList.remove("active")
-            // }
+            filterData();
         }
     })
 })
 
 
 
+// To select the colors of products...!
 
 let circles = document.querySelectorAll(".circle");
 circles.forEach(circle => {
@@ -116,23 +106,15 @@ circles.forEach(circle => {
 
         }
         else {
-         filterData();
+            filterData();
 
-            // let category = document.querySelector(".not")
-
-            // if (filterClrs.length == 0) {
-            //     category.classList.add("active");
-            //     category.innerHTML = "Try searching another filter.No related products found!"
-
-            // }
-            // else {
-            //     category.classList.remove("active")
-            // }
         }
     })
 })
 
 
+
+// To check the empty object...!
 
 function checkEmptyObject() {
 
@@ -148,6 +130,8 @@ function checkEmptyObject() {
 }
 
 
+
+// To find the product of particular range or price...!
 
 let range = document.querySelector(".range");
 let output = document.getElementById("output");
@@ -173,115 +157,10 @@ range.addEventListener(`change`, () => {
 })
 
 
-const search = document.getElementById("filter-search");
 
-search.addEventListener(`input`, () => {
-    obj.search = [];
+// button to reset all filters!
 
-    if (search.value.trim() != "") {
-        obj.search.push(search.value);
-        filterData();
-    }
-    else if (checkEmptyObject()) {
-        displayProducts("category", Productdata)
-    }
-    else {
-        filterData();
-    }
-    // if (filterData().length == 0) {
-    //     category.classList.add("active");
-    //     category.innerHTML = "Try searching another filter.No related products found!"
-
-    // }
-    // else {
-    //     category.classList.remove("active")
-    // }
-
-})
-
-
-
-function filterData() {
-
-    let data = getData();
-    data.forEach(product => {
-        let variants = product.variants;
-
-        variants.forEach(variant => {
-            // console.log("obj",obj)
-            const search = document.getElementById("filter-search");
-
-            let title = (variant.title).toLowerCase();
-            let color = (variant.color).toLowerCase();
-            let size = (variant.size).toLowerCase();
-            let price = variant.selling_price;
-
-            // console.log(title,color,size,price)
-            if (obj.colors.includes(color)) {
-                colorFilterProducts.push(variant);
-
-            }
-            if (obj.sizes.includes(size)) {
-                sizeFilterProducts.push(variant);
-
-            }
-            if (price <= obj.price[0]) {
-                priceFilterProducts.push(variant)
-            }
-            if (title.includes(obj.search[0])) {
-                searchFilterProducts.push(variant);
-            }
-
-        })
-
-    })
-    let result = filterArray("id", Productdata, colorFilterProducts, sizeFilterProducts, priceFilterProducts, searchFilterProducts);
-// console.log(colorFilterProducts,sizeFilterProducts)
-console.log(result)
-
-    displayProducts("category", result);
-
-    sizeFilterProducts = [];
-    colorFilterProducts = [];
-    priceFilterProducts = [];
-    searchFilterProducts = [];
-
-    // return result;
-
-}
-
-
-
-function filterArray(key, mainData, ...arrays) {
-
-    // if (!arrays.length) {
-    //     return [];
-    // }
-    let activeArray = arrays.filter(arr => arr.length > 0);
-    if (activeArray.length === 0) {
-        // return [];
-        activeArray = [[{}],[{}]]
-        console.log("Active array: ",activeArray)
-
-    }
-
-    let common = mainData.flatMap(product =>
-        product.variants.filter(variant =>
-            activeArray.every(arr => arr.some(obj =>
-                Object.keys(obj).every(key =>
-                    variant[key] === obj[key]
-                    
-                )
-            ))
-        )
-    )
-    return common;
-}
-
-
-
-
-let resetButton = document.getElementById("reset-button");
+const resetButton = document.getElementById("reset-button");
 
 resetButton.addEventListener(`click`, () => {
 
@@ -310,5 +189,101 @@ resetButton.addEventListener(`click`, () => {
     displayProducts("category", Productdata);
 
 })
+
+
+
+// Searchbar to find search products...!
+
+const search = document.getElementById("filter-search");
+
+search.addEventListener(`input`, () => {
+    obj.search = [];
+
+    if (search.value.trim() != "") {
+        obj.search.push(search.value);
+        filterData();
+    }
+    else if (checkEmptyObject()) {
+        displayProducts("category", Productdata)
+    }
+    else {
+        filterData();
+    }
+
+
+})
+
+
+// To filter all the products according to size,color,price..!
+
+function filterData() {
+
+    let data = getData();
+    data.forEach(product => {
+        const variants = product.variants;
+
+        variants.forEach(variant => {
+            const search = document.getElementById("filter-search");
+            let title = (variant.title).toLowerCase();
+            let color = (variant.color).toLowerCase();
+            let sizes = variant.size;
+            let price = variant.selling_price;
+            sizes.forEach(size => {
+
+                if (obj.sizes.includes(size.toLowerCase())) {
+                    sizeFilterProducts.push(variant);
+
+                }
+            })
+            if (obj.colors.includes(color)) {
+                colorFilterProducts.push(variant);
+
+            }
+            if (price <= obj.price[0]) {
+                priceFilterProducts.push(variant)
+            }
+            if (title.includes(obj.search[0])) {
+                searchFilterProducts.push(variant);
+            }
+
+        })
+
+    })
+    let result = filterArray("id", Productdata, colorFilterProducts, sizeFilterProducts, priceFilterProducts, searchFilterProducts);
+
+    displayProducts("category", result);
+
+    sizeFilterProducts = [];
+    colorFilterProducts = [];
+    priceFilterProducts = [];
+    searchFilterProducts = [];
+}
+
+
+
+// filterArray to find common products!
+
+function filterArray(key, mainData, ...arrays) {
+   
+    let activeArray = arrays.filter(arr => arr.length > 0);
+    if (activeArray.length === 0) {
+        activeArray = [[{}], [{}]]
+
+    }
+
+    let common = mainData.flatMap(product =>
+        product.variants.filter(variant =>
+            activeArray.every(arr => arr.some(obj =>
+                Object.keys(obj).every(key =>
+                    variant[key] === obj[key]
+
+                )
+            ))
+        )
+    )
+    return common;
+}
+
+
 
 

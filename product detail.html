@@ -20,29 +20,12 @@
         <div class="sidebar-container" id="container">
 
             <ul class="sidebar-menu">
-
                 <li style="text-align: right;" class="menu-item"><button class="sidebar-toggler button2"><i
                             class="fa-solid fa-xmark"></i></button></li>
-
-                <li id="button" class="menu-item dropdown" data-target="menu1"><a class="nav-link" href="#">Shop
-                    </a><i class="fa-solid fa-caret-down arrow"></i></li>
-
-                <li class="sub-menu" data-target="menu1" id="pages">
-                    <ul class="sidebar-menu">
-                        <li class="menu-item"><a class="nav-link" href="#">Category1</a></li>
-                        <li class="menu-item"><a class="nav-link" href="#">Category2</a></li>
-                        <li class="menu-item"><a class="nav-link" href="#">Category3</a></li>
-
-                    </ul>
-                </li>
-
+                <li class="menu-item"><a class="nav-link" href="category.html">Shop</a></li>
                 <li class="menu-item"><a class="nav-link" href="#">On Sale</a></li>
-
                 <li class="menu-item"><a class="nav-link" href="#">New Arrivals</a></li>
-
-
                 <li class="menu-item"><a class="nav-link" href="#">Brands</a></li>
-
             </ul>
             <div class="sidebar-overlay sidebar-toggler"></div>
 
@@ -57,7 +40,6 @@
 
         <div class="navbar-container flex-content-center">
 
-
             <div class="shop">
                 <div class="side-button">
                     <button class="sidebar-toggler"><i class="fa-solid fa-bars"></i></button>
@@ -65,15 +47,7 @@
             </div>
             <div class="navmenu-container">
                 <ul class="navbar-menu flex-content-center">
-
-                    <li class="nav-item dropdown" data-target="menu1"><a class="nav-link" href="#">Shop <i
-                                class="fa fa-angle-down "></i></a>
-                        <ul class="sub-menu" data-target="menu1">
-                            <li class="sub-menu-item"><a class="sub-menu-link" href="#">Category1</a></li>
-                            <li class="sub-menu-item"><a class="sub-menu-link" href="#">Category2</a></li>
-                            <li class="sub-menu-item"><a class="sub-menu-link" href="#">Category3</a></li>
-                        </ul>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="category.html">Shop</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">On Sale</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">New Arrivals</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Brands</a></li>
@@ -84,6 +58,7 @@
                 <div class="search-bar">
                     <i class="fa-solid fa-magnifying-glass"></i>
                     <input class="search" type="text" id="search" placeholder=" Search for products">
+                    <div class="search-options"></div>
                 </div>
 
                 <div class="icons">
@@ -109,7 +84,6 @@
                     <li class="nav-item"><a class="nav-link grey-color" href="#">Men <i
                                 class="fa fa-angle-right "></i></a></li>
                     <li class="nav-item"><a class="nav-link" href="#">T-shirts</a></li>
-
                 </ul>
             </div>
 
@@ -118,10 +92,10 @@
 
                 <div class="t-shirt-container">
                     <div class="column-t-shirts-container">
-                        <!-- <div class="column-t-shirt"><img class="t-shirt-image"/></div> -->
+
                     </div>
                     <div class="huge-t-shirt">
-                        <img id="main-image" class="t-shirt-image" />
+                        <img id="main-image" class="t-shirt-image width-100" />
                     </div>
                 </div>
 
@@ -143,37 +117,35 @@
                         <h5 class="grey-color"><s id="original-price"></s></h5>
                         <div id="discount" class="discount flex-content-center">-40%</div>
                     </div>
-                    <div class="para">This graphic t-shirt which is perfect for any occasion. Crafted from a soft and
+                    <div class="para border-bottom">This graphic t-shirt which is perfect for any occasion. Crafted from a soft and
                         breathable fabric, it offers superior comfort and style.</div>
 
-                    <div class="select-option">
+                    <div class="select-option width-100 border-bottom">
 
                         <div class="select-heading">Select Colors</div>
 
                         <div class="colors-container">
-                            <!-- <div class="circle brown flex-content-center"><i class="fa-solid fa-check tick"></i></div>
-                            <div class="circle dark-blue flex-content-center"><i class="fa-solid fa-check tick"></i>
-                            </div> -->
+            
                         </div>
 
                     </div>
 
-                    <div class="select-option">
+                    <div class="select-option width-100">
                         <div class="select-heading">Choose Size</div>
 
                         <div class="size-container">
-                            <!-- <div class="button-shape flex-content-center"></div> -->
+                      
                         </div>
 
                     </div>
 
-                    <div class="buttons-container">
+                    <div class="buttons-container width-100">
                         <div class="button-shape flex-content-center button-width">
-                            <h5 class="quantity flex-content-center minus"><i class="fa-solid fa-minus"></i></h5>
-                            <h5 id="quantity" class="quantity flex-content-center"></h5>
-                            <h5 class="quantity flex-content-center add"><i class="fa-solid fa-plus"></i></h5>
+                            <h5 class="quantity flex-content-center minus width-100"><i class="fa-solid fa-minus"></i></h5>
+                            <h5 id="quantity" class="quantity flex-content-center width-100"></h5>
+                            <h5 class="quantity flex-content-center add width-100"><i class="fa-solid fa-plus"></i></h5>
                         </div>
-                        <form class="form" id="form">
+                        <form class="form width-100" id="form">
                             <input id="id-input" type="hidden">
                             <input id="size-input" type="hidden">
                             <input id="quantity-input" type="hidden">
@@ -189,13 +161,13 @@
         </div>
 
         <div class="review-section flex-column-content-center">
-            <div class="top-bar">
+            <div class="top-bar flex-space-between">
                 <div class="name grey-color">Product Details</div>
                 <div class="name">Rating & Reviews</div>
                 <div class="name grey-color">FAQs</div>
             </div>
 
-            <div class="review-tab">
+            <div class="review-tab flex-space-between width-100">
                 <div class="left">
                     <h4>All Reviews</h4>
                     <p class="grey-color">(451)</p>
@@ -207,9 +179,9 @@
                 </div>
             </div>
 
-            <div class="review-container">
+            <div class="review-container width-100">
                 <div class="customer-feedback">
-                    <div class="star-container">
+                    <div class="star-container flex-space-between">
                         <div class="stars">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
@@ -234,7 +206,7 @@
                 </div>
 
                 <div class="customer-feedback">
-                    <div class="star-container">
+                    <div class="star-container flex-space-between">
                         <div class="stars">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
@@ -256,7 +228,7 @@
                 </div>
 
                 <div class="customer-feedback">
-                    <div class="star-container">
+                    <div class="star-container flex-space-between">
                         <div class="stars">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
@@ -279,7 +251,7 @@
                 </div>
 
                 <div class="customer-feedback">
-                    <div class="star-container">
+                    <div class="star-container flex-space-between">
                         <div class="stars">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
@@ -305,7 +277,7 @@
 
             <div id="review" class="review-container display-none">
                 <div class="customer-feedback">
-                    <div class="star-container">
+                    <div class="star-container flex-space-between">
                         <div class="stars">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
@@ -329,7 +301,7 @@
                 </div>
 
                 <div class="customer-feedback">
-                    <div class="star-container">
+                    <div class="star-container flex-space-between">
                         <div class="stars">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
@@ -352,7 +324,7 @@
                 </div>
             </div>
 
-            <div class="review-button flex-content-center">
+            <div class="review-button flex-content-center width-100">
                 <h5 class="button flex-content-center">Load More Reviews</h5>
             </div>
 
@@ -373,7 +345,7 @@
         <div class="section-detail flex-column-content-center">
 
             <div class="offers-section flex-content-center">
-                <div class="wrap">
+                <div class="wrap flex-space-between">
                     <div class="heading-container">
                         <h1 class="heading">STAY UPTO DATE ABOUT OUR LATEST OFFERS</h1>
                     </div>
@@ -387,7 +359,7 @@
                 </div>
             </div>
 
-            <div class="container">
+            <div class="container flex-space-between">
 
                 <div class="description">
                     <div class="shop">SHOP.CO</div>
@@ -487,7 +459,7 @@
                 },
             },
             autoplay: {
-                // delay:3000,
+                delay:3000,
             },
 
         });

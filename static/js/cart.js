@@ -25,15 +25,15 @@ const minusicon = document.createElement('i');
 const addicon = document.createElement('i');
 
 
-clothsCart.classList.add("cloths-cart");
+clothsCart.classList.add("cloths-cart","flex-space-between");
 imageContainer.classList.add("image-container")
-image.classList.add("image");
+image.classList.add("image","width-100");
 clothsDetail.classList.add("cloth-details");
 productsName.classList.add("name");
 productSize.classList.add("category");
 productColor.classList.add("category");
 price.classList.add("font-size")
-trashContainer.classList.add("trash-container");
+trashContainer.classList.add("trash-container","flex-space-between");
 icon.classList.add("fa-trash-can", "fa-solid");
 buttonsContainer.classList.add("button-shape", "flex-content-center", "flex-space-between");
 subtract.classList.add("quantity");

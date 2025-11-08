@@ -24,26 +24,10 @@
 
                 <li style="text-align: right;" class="menu-item"><button class="sidebar-toggler button2"><i
                             class="fa-solid fa-xmark"></i></button></li>
-
-                <li id="button" class="menu-item dropdown" data-target="menu1"><a class="nav-link" href="#">Shop
-                    </a><i class="fa-solid fa-caret-down arrow"></i></li>
-
-                <li class="sub-menu" data-target="menu1" id="pages">
-                    <ul class="sidebar-menu">
-                        <li class="menu-item"><a class="nav-link" href="#">Category1</a></li>
-                        <li class="menu-item"><a class="nav-link" href="#">Category2</a></li>
-                        <li class="menu-item"><a class="nav-link" href="#">Category3</a></li>
-
-                    </ul>
-                </li>
-
+                <li class="menu-item"><a class="nav-link" href="category.html">Shop</a></li>
                 <li class="menu-item"><a class="nav-link" href="#">On Sale</a></li>
-
                 <li class="menu-item"><a class="nav-link" href="#">New Arrivals</a></li>
-
-
                 <li class="menu-item"><a class="nav-link" href="#">Brands</a></li>
-
             </ul>
             <div class="sidebar-overlay sidebar-toggler"></div>
 
@@ -67,15 +51,7 @@
             </div>
             <div class="navmenu-container">
                 <ul class="navbar-menu flex-content-center">
-
-                    <li class="nav-item dropdown" data-target="menu1"><a class="nav-link" href="#">Shop <i
-                                class="fa fa-angle-down "></i></a>
-                        <ul class="sub-menu" data-target="menu1">
-                            <li class="sub-menu-item"><a class="sub-menu-link" href="#">Category1</a></li>
-                            <li class="sub-menu-item"><a class="sub-menu-link" href="#">Category2</a></li>
-                            <li class="sub-menu-item"><a class="sub-menu-link" href="#">Category3</a></li>
-                        </ul>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="category.html">Shop</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">On Sale</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">New Arrivals</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Brands</a></li>
@@ -86,6 +62,7 @@
                 <div class="search-bar">
                     <i class="fa-solid fa-magnifying-glass"></i>
                     <input class="search" type="text" id="search" placeholder=" Search for products">
+                    <div class="search-options"></div>
                 </div>
 
                 <div class="icons">
@@ -110,34 +87,34 @@
             <div class="sidebar-container2" id="container2">
 
                 <div class="filter-container flex-column-content-center">
-                    <div class="name flex-space-between border-bottom">
+                    <div class="name flex-space-between width-100 border-bottom">
                         <h4>Filters</h4>
                         <i class="fa-solid fa-sliders grey-color filter"></i>
                         <i class="fa-solid fa-xmark grey-color cross filter-button"></i>
                     </div>
 
-                    <div class="filter-search-bar">
+                    <div class="filter-search-bar width-100">
                         <i class="fa-solid fa-magnifying-glass"></i>
                         <input class="filter-search" type="text" id="filter-search" placeholder=" Search for products">
                     </div>
 
-                    <div class="price-range flex-column-content-center border-bottom border-top">
-                        <div data-target="arrow1" class="width flex-space-between filter-dropdown">
+                    <div class="price-range flex-column-content-center border-bottom border-top width-100">
+                        <div data-target="arrow1" class="width-100 flex-space-between filter-dropdown">
                             <h4>Price</h4> <i class="fa fa-angle-up arrow"></i>
                         </div>
-                        <div data-target="arrow1" class="price flex-space-between filter-section">
-                            <input class="range" type="range" min="0" max="5000" value="50">
+                        <div data-target="arrow1" class="price flex-space-between width-100 filter-section">
+                            <input class="range width-100" type="range" min="0" max="5000" value="50">
                             <output id="output">$0</output>
                         </div>
                     </div>
 
-                    <div class="color-section border-bottom">
+                    <div class="color-section border-bottom width-100">
 
                         <div data-target="arrow2" class=" flex-space-between filter-dropdown">
                             <h4>Colors</h4> <i class="fa fa-angle-up arrow"></i>
                         </div>
 
-                        <div data-target="arrow2" class="colors-container filter-section">
+                        <div data-target="arrow2" class="colors-container filter-section width-100">
                             <div class="circle green flex-content-center" data-color="green"><i
                                     class="fa-solid fa-check tick"></i></div>
                             <div data-color="red" class="circle red flex-content-center"><i
@@ -163,7 +140,7 @@
 
                     </div>
 
-                    <div class="size-section">
+                    <div class="size-section width-100">
                         <div data-target="arrow3" class="name flex-space-between filter-dropdown">
                             <h4>Size</h4> <i class="fa fa-angle-up arrow"></i>
                         </div>
@@ -193,9 +170,9 @@
             </div>
 
 
-            <div class="casual-section">
+            <div class="casual-section width-100">
 
-                <div class="heading-container flex-space-between">
+                <div class="heading-container width-100 flex-space-between">
                     <h2>Casual</h2>
                     <div class=" left flex-space-between">
                         <p class="grey-color">Showing 1-10 of 100 Products</p>
@@ -207,30 +184,9 @@
                     </div>
                 </div>
 
-                <div class="cloth-section" id="category">
-
+                <div class="cloth-section width-100" id="category">
 
                 </div>
-                <div class="not grey-color"></div>
-
-
-                <!-- <div class="last-container flex-space-between border-top">
-
-                    <div class="button"><i class="fa-solid fa-arrow-left"></i>Previous</div>
-                    <div class="numbers flex-space-between grey-color">
-                        <div class="select">1</div>
-                        <div>2</div>
-                        <div>3</div>
-                        <div><i class="fa-solid fa-ellipsis"></i></div>
-                        <div>8</div>
-                        <div>9</div>
-                        <div>10</div>
-                    </div>
-                    <div class="button">Next<i class="fa-solid fa-arrow-right"></i></div>
-
-                </div> -->
-
-
             </div>
 
 
@@ -238,7 +194,7 @@
         <div class="section-detail flex-column-content-center">
 
             <div class="offers-section flex-content-center">
-                <div class="wrap">
+                <div class="wrap flex-space-between">
                     <div class="heading-container">
                         <h1 class="heading">STAY UPTO DATE ABOUT OUR LATEST OFFERS</h1>
                     </div>
@@ -252,7 +208,7 @@
                 </div>
             </div>
 
-            <div class="container">
+            <div class="container flex-space-between">
 
                 <div class="description">
                     <div class="shop">SHOP.CO</div>

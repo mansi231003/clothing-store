@@ -20,29 +20,12 @@
            <div class="sidebar-container" id="container">
 
             <ul class="sidebar-menu">
-
                 <li style="text-align: right;" class="menu-item"><button class="sidebar-toggler button2"><i
                             class="fa-solid fa-xmark"></i></button></li>
-
-                <li id="button" class="menu-item dropdown" data-target="menu1"><a class="nav-link" href="#">Shop
-                    </a><i class="fa-solid fa-caret-down arrow"></i></li>
-
-                <li class="sub-menu" data-target="menu1" id="pages">
-                    <ul class="sidebar-menu">
-                        <li class="menu-item"><a class="nav-link" href="#">Category1</a></li>
-                        <li class="menu-item"><a class="nav-link" href="#">Category2</a></li>
-                        <li class="menu-item"><a class="nav-link" href="#">Category3</a></li>
-
-                    </ul>
-                </li>
-
+                <li class="menu-item"><a class="nav-link" href="category.html">Shop</a></li>
                 <li class="menu-item"><a class="nav-link" href="#">On Sale</a></li>
-
                 <li class="menu-item"><a class="nav-link" href="#">New Arrivals</a></li>
-
-
                 <li class="menu-item"><a class="nav-link" href="#">Brands</a></li>
-
             </ul>
             <div class="sidebar-overlay sidebar-toggler"></div>
 
@@ -62,15 +45,7 @@
             </div>SHOP.CO</div>
             <div class="navmenu-container">
                 <ul class="navbar-menu flex-content-center">
-
-                    <li class="nav-item dropdown" data-target="menu1"><a class="nav-link" href="#">Shop <i
-                                class="fa fa-angle-down "></i></a>
-                        <ul class="sub-menu" data-target="menu1">
-                            <li class="sub-menu-item"><a class="sub-menu-link" href="#">Category1</a></li>
-                            <li class="sub-menu-item"><a class="sub-menu-link" href="#">Category2</a></li>
-                            <li class="sub-menu-item"><a class="sub-menu-link" href="#">Category3</a></li>
-                        </ul>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="category.html">Shop</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">On Sale</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">New Arrivals</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Brands</a></li>
@@ -81,6 +56,7 @@
                 <div class="search-bar">
                     <i class="fa-solid fa-magnifying-glass"></i>
                     <input class="search" type="text" id="search" placeholder=" Search for products">
+                    <div class="search-options"></div>
                 </div>
 
                 <div class="icons">
@@ -102,53 +78,24 @@
         </div>
 
         <div class="hero-section">
-            <h1 class="heading">YOUR CART</h1>
-            <div class="hero-section-container">
+            <h1 class="heading width-100">YOUR CART</h1>
+            <div class="hero-section-container width-100">
 
-                <div id="product-container" class="sub-container">
-                    <!-- <div class="cloths-cart">
-                        <div class="image-container">
-                            <img class="image" src="static/image/product shirt2.png" />
-                        </div>
-                        <div class="cloth-details">
-                            <h4 class="name">Gradient Graphic T-shirt</h4>
-                            <div class="category">Size:<p>Large</p>
-                            </div>
-                            <div class="category">Color:<p>White</p>
-                            </div>
-                            <h5 class="font-size">$145</h5>
-
-                        </div>
-                        <div class="trash-container">
-                            <i class="fa-solid fa-trash-can"></i>
-
-                            <div class="button-shape flex-content-center flex-space-between">
-                                <h5 class="quantity"><i class="fa-solid fa-minus"></i></h5>
-                                <h5 class="quantity">1</h5>
-                                <h5 class="quantity"><i class="fa-solid fa-plus"></i></h5>
-                            </div>
-
-                        </div>
-
-                    </div> -->            
+                <div id="product-container" class="sub-container">           
 
                 </div>
 
                 <div class="sub-container">
                     <h3 class="name">Order Summary</h3>
-                    <div class="total">
+                    <div class="total flex-space-between">
                         <p >Subtotal</p>
                         <h5 id="sub-total" class="font-size"></h5>
                     </div>
-                    <!-- <div class="total">
-                        <p>Discount(-20%)</p>
-                        <h5 class="font-size red-color">-$113</h5>
-                    </div> -->
-                    <div class="total border-bottom">
+                    <div class="total flex-space-between border-bottom">
                         <p>Delivery Fee</p>
                         <h5 id="delivery-fee" class="font-size"></h5>
                     </div>
-                    <div class="total">
+                    <div class="total flex-space-between width-100">
                         <p>Total</p>
                         <h5 id="total" class="font-size"></h5>
                     </div>
@@ -174,7 +121,7 @@
                     <div class="section-detail flex-column-content-center">
 
               <div class="offers-section flex-content-center">
-            <div class="wrap">
+            <div class="wrap flex-space-between">
                 <div class="heading-container">
                     <h1 class="heading">STAY UPTO DATE ABOUT OUR LATEST OFFERS</h1>
                 </div>
@@ -188,7 +135,7 @@
             </div>
         </div>
         
-            <div class="container">
+            <div class="container flex-space-between">
 
                 <div class="description">
                     <div class="shop">SHOP.CO</div>
@@ -257,7 +204,6 @@
         <div>
 
             <script src="static/js/script.js"></script>
-            <!-- <script src="static/js/productpage.js"></script> -->
             <script src="static/js/cart.js"></script>
 
 </body>

@@ -1,41 +1,4 @@
-
-const dropdowns = document.querySelectorAll(".dropdown");
-const subMenus = document.querySelectorAll(".sub-menu");
-const nav = document.querySelector(".navbar-container")
-dropdowns.forEach(dropdown => {
-    dropdown.addEventListener(`click`, () => {
-        subMenus.forEach(subMenu => {
-            if (subMenu.dataset.target == dropdown.dataset.target) {
-                if (subMenu.classList.contains("active")) {
-                    subMenu.classList.remove(active);
-                }
-                else {
-                    subMenu.classList.add("active");
-                }
-            }
-            else {
-                subMenu.classList.remove("active");
-            }
-        })
-    })
-
-
-
-    subMenus.forEach(subMenu => {
-        subMenu.addEventListener(`mouseover`, () => {
-            subMenu.classList.add("active");
-
-        })
-        subMenu.addEventListener(`mouseout`, () => {
-            subMenus.forEach(subMenu => {
-                subMenu.classList.remove("active");
-            })
-        })
-    })
-
-})
-
-
+// Toggler to open sidebar container...!
 
 const toggles = document.querySelectorAll('.sidebar-toggler');
 const container = document.getElementById('container');
@@ -58,10 +21,6 @@ toggles.forEach(toggler => {
 
 
 
-
-
-
-
 const Productdata = [
     {
         "collection": ['new arrival'],
@@ -77,7 +36,7 @@ const Productdata = [
             {
                 "id": "13456734-1",
                 "title": "T-shirt with Tape Details",
-                "size": ["L","S"],
+                "size": ["L", "S"],
                 "color": "Black",
                 "original_price": "450",
                 "selling_price": "320",
@@ -97,7 +56,7 @@ const Productdata = [
             {
                 "id": "13456734-3",
                 "title": "T-shirt with Tape Details",
-                "size": ["XL","L"],
+                "size": ["XL", "L"],
                 "color": "Orange",
                 "original_price": "480",
                 "selling_price": "350",
@@ -121,7 +80,7 @@ const Productdata = [
             {
                 "id": "13456735-1",
                 "title": "Skinny Fit Jeans",
-                "size": "M",
+                "size": ["L", "XL"],
                 "color": "Blue",
                 "original_price": "800",
                 "selling_price": "600",
@@ -131,7 +90,7 @@ const Productdata = [
             {
                 "id": "13456735-2",
                 "title": "Skinny Fit Jeans",
-                "size": "L",
+                "size": ["XS", "M"],
                 "color": "green",
                 "original_price": "850",
                 "selling_price": "650",
@@ -154,7 +113,7 @@ const Productdata = [
             {
                 "id": "13456736-1",
                 "title": "Checkered Shirt",
-                "size": "28",
+                "size": ["L", "XL"],
                 "color": "Dark Blue",
                 "original_price": "1200",
                 "selling_price": "900",
@@ -164,7 +123,7 @@ const Productdata = [
             {
                 "id": "13456736-2",
                 "title": "Checkered Shirt",
-                "size": "30",
+                "size": ["S", "XL"],
                 "color": "Light Blue",
                 "original_price": "1250",
                 "selling_price": "950",
@@ -174,7 +133,7 @@ const Productdata = [
             {
                 "id": "13456736-3",
                 "title": "Checkered Shirt",
-                "size": "32",
+                "size": ["M", "L"],
                 "color": "black",
                 "original_price": "1300",
                 "selling_price": "1000",
@@ -197,7 +156,7 @@ const Productdata = [
             {
                 "id": "13456737-1",
                 "title": "Sleeve Striped T-shirt",
-                "size": "S",
+                "size": ["L", "XX-L"],
                 "color": "Pink",
                 "original_price": "1500",
                 "selling_price": "1100",
@@ -207,7 +166,7 @@ const Productdata = [
             {
                 "id": "13456737-2",
                 "title": "Sleeve Striped T-shirt",
-                "size": "M",
+                "size":["S", "M"],
                 "color": "Yellow",
                 "original_price": "1550",
                 "selling_price": "1150",
@@ -230,7 +189,7 @@ const Productdata = [
             {
                 "id": "13456738-1",
                 "title": "Vertical Striped Shirt",
-                "size": "M",
+                "size": ["L"],
                 "color": "Grey",
                 "original_price": "1800",
                 "selling_price": "1400",
@@ -240,7 +199,7 @@ const Productdata = [
             {
                 "id": "13456738-2",
                 "title": "Vertical Striped Shirt",
-                "size": "L",
+                "size": ["S", "L"],
                 "color": "Black",
                 "original_price": "1900",
                 "selling_price": "1500",
@@ -250,7 +209,7 @@ const Productdata = [
             {
                 "id": "13456738-3",
                 "title": "Vertical Striped Shirt",
-                "size": "XL",
+                "size": ["S"],
                 "color": "Maroon",
                 "original_price": "2000",
                 "selling_price": "1600",
@@ -273,7 +232,7 @@ const Productdata = [
             {
                 "id": "13456739-1",
                 "title": "Courage Graphic T-Shirt",
-                "size": "30",
+                "size": ["M", "L"],
                 "color": "Khaki",
                 "original_price": "900",
                 "selling_price": "650",
@@ -283,7 +242,7 @@ const Productdata = [
             {
                 "id": "13456739-2",
                 "title": "Courage Graphic T-Shirt",
-                "size": "32",
+                "size": ["XL"],
                 "color": "Olive",
                 "original_price": "950",
                 "selling_price": "700",
@@ -306,7 +265,7 @@ const Productdata = [
             {
                 "id": "13456740-1",
                 "title": "Loose Fit Bermuda Shorts",
-                "size": "4-5Y",
+                "size": ["L", "XL"],
                 "color": "Red",
                 "original_price": "350",
                 "selling_price": "250",
@@ -316,7 +275,7 @@ const Productdata = [
             {
                 "id": "13456740-2",
                 "title": "Loose Fit Bermuda Shorts",
-                "size": "6-7Y",
+                "size":["L", "M"],
                 "color": "Blue",
                 "original_price": "380",
                 "selling_price": "280",
@@ -326,7 +285,7 @@ const Productdata = [
             {
                 "id": "13456740-3",
                 "title": "Loose Fit Bermuda Shorts",
-                "size": "8-9Y",
+                "size": ["M"],
                 "color": "Green",
                 "original_price": "400",
                 "selling_price": "300",
@@ -349,7 +308,7 @@ const Productdata = [
             {
                 "id": "13456741-1",
                 "title": "Faded Skinny Jeans",
-                "size": "M",
+                "size":["S", "M"],
                 "color": "Black",
                 "original_price": "5000",
                 "selling_price": "3800",
@@ -359,7 +318,7 @@ const Productdata = [
             {
                 "id": "13456741-2",
                 "title": "Faded Skinny Jeans",
-                "size": "L",
+                "size": ["S"],
                 "color": "Brown",
                 "original_price": "5200",
                 "selling_price": "4000",
@@ -381,7 +340,7 @@ const Productdata = [
             {
                 "id": "13456742-1",
                 "title": "Polo with Contrast Trims",
-                "size": "S",
+                "size": ["L", "XL"],
                 "color": "Black",
                 "original_price": "700",
                 "selling_price": "500",
@@ -391,7 +350,7 @@ const Productdata = [
             {
                 "id": "13456742-2",
                 "title": "Polo with Contrast Trims",
-                "size": "M",
+                "size": ["L", "XL"],
                 "color": "Purple",
                 "original_price": "750",
                 "selling_price": "550",
@@ -401,7 +360,7 @@ const Productdata = [
             {
                 "id": "13456742-3",
                 "title": "Polo with Contrast Trims",
-                "size": "L",
+                "size":["L", "S"],
                 "color": "Grey",
                 "original_price": "800",
                 "selling_price": "600",
@@ -424,7 +383,7 @@ const Productdata = [
             {
                 "id": "13456743-1",
                 "title": "Gradient Graphic T-shirt",
-                "size": "M",
+                "size":["L"],
                 "color": "Red",
                 "original_price": "1100",
                 "selling_price": "800",
@@ -434,7 +393,7 @@ const Productdata = [
             {
                 "id": "13456743-2",
                 "title": "Gradient Graphic T-shirt",
-                "size": "L",
+                "size":["M"],
                 "color": "Blue",
                 "original_price": "1150",
                 "selling_price": "850",
@@ -456,7 +415,7 @@ const Productdata = [
             {
                 "id": "13456744-1",
                 "title": "Polo with Tipping Details",
-                "size": "S",
+                "size": ["S"],
                 "color": "Black",
                 "original_price": "1300",
                 "selling_price": "950",
@@ -466,7 +425,7 @@ const Productdata = [
             {
                 "id": "13456744-2",
                 "title": "Polo with Tipping Details",
-                "size": "M",
+                "size": ["M"],
                 "color": "Beige",
                 "original_price": "1350",
                 "selling_price": "1000",
@@ -476,7 +435,7 @@ const Productdata = [
             {
                 "id": "13456744-3",
                 "title": "Polo with Tipping Details",
-                "size": "L",
+                "size": ["XL"],
                 "color": "Navy",
                 "original_price": "1400",
                 "selling_price": "1050",
@@ -499,7 +458,7 @@ const Productdata = [
             {
                 "id": "13456745-1",
                 "title": "Black Striped T-shirt",
-                "size": "M",
+                "size": ["L"],
                 "color": "Black",
                 "original_price": "850",
                 "selling_price": "600",
@@ -509,7 +468,7 @@ const Productdata = [
             {
                 "id": "13456745-2",
                 "title": "Black Striped T-shirt",
-                "size": "L",
+                "size":["S"],
                 "color": "Navy",
                 "original_price": "900",
                 "selling_price": "650",
@@ -531,7 +490,7 @@ const Productdata = [
             {
                 "id": "13456746-1",
                 "title": "Bomber Jacket",
-                "size": "M",
+                "size":["L", "S"],
                 "color": "Green",
                 "original_price": "2500",
                 "selling_price": "1900",
@@ -541,7 +500,7 @@ const Productdata = [
             {
                 "id": "13456746-2",
                 "title": "Bomber Jacket",
-                "size": "L",
+                "size":["L"],
                 "color": "Black",
                 "original_price": "2600",
                 "selling_price": "2000",
@@ -551,7 +510,7 @@ const Productdata = [
             {
                 "id": "13456746-3",
                 "title": "Bomber Jacket",
-                "size": "XL",
+                "size":["L", "XL"],
                 "color": "Burgundy",
                 "original_price": "2700",
                 "selling_price": "2100",
@@ -574,7 +533,7 @@ const Productdata = [
             {
                 "id": "13456747-1",
                 "title": "Kids Denim Jacket",
-                "size": "4-5Y",
+                "size":["M"],
                 "color": "Blue",
                 "original_price": "800",
                 "selling_price": "600",
@@ -584,7 +543,7 @@ const Productdata = [
             {
                 "id": "13456747-2",
                 "title": "Kids Denim Jacket",
-                "size": "6-7Y",
+                "size":["L", "XL"],
                 "color": "Light Blue",
                 "original_price": "850",
                 "selling_price": "650",
@@ -606,7 +565,7 @@ const Productdata = [
             {
                 "id": "13456748-1",
                 "title": "Formal Blazer",
-                "size": "M",
+                "size":["L", "XL"],
                 "color": "Navy",
                 "original_price": "3500",
                 "selling_price": "2700",
@@ -616,7 +575,7 @@ const Productdata = [
             {
                 "id": "13456748-2",
                 "title": "Formal Blazer",
-                "size": "L",
+                "size":["L", "XL"],
                 "color": "Charcoal",
                 "original_price": "3600",
                 "selling_price": "2800",
@@ -626,7 +585,7 @@ const Productdata = [
             {
                 "id": "13456748-3",
                 "title": "Formal Blazer",
-                "size": "XL",
+                "size":["S", "XL"],
                 "color": "Black",
                 "original_price": "3700",
                 "selling_price": "2900",
@@ -648,7 +607,7 @@ const Productdata = [
             {
                 "id": "13456749-1",
                 "title": "Knit Sweater",
-                "size": "S",
+                "size":["XL"],
                 "color": "Cream",
                 "original_price": "1600",
                 "selling_price": "1200",
@@ -658,7 +617,7 @@ const Productdata = [
             {
                 "id": "13456749-2",
                 "title": "Knit Sweater",
-                "size": "M",
+                "size":["L", "XL"],
                 "color": "Grey",
                 "original_price": "1650",
                 "selling_price": "1250",
@@ -680,7 +639,7 @@ const Productdata = [
             {
                 "id": "13456750-1",
                 "title": "Chino Pants",
-                "size": "30",
+                "size":["L", "XL"],
                 "color": "Beige",
                 "original_price": "1400",
                 "selling_price": "1000",
@@ -690,7 +649,7 @@ const Productdata = [
             {
                 "id": "13456750-2",
                 "title": "Chino Pants",
-                "size": "32",
+                "size": ["L", "XL"],
                 "color": "Navy",
                 "original_price": "1450",
                 "selling_price": "1050",
@@ -700,7 +659,7 @@ const Productdata = [
             {
                 "id": "13456750-3",
                 "title": "Chino Pants",
-                "size": "34",
+                "size":["L", "XL"],
                 "color": "Olive",
                 "original_price": "1500",
                 "selling_price": "1100",
@@ -722,7 +681,7 @@ const Productdata = [
             {
                 "id": "1345651-1",
                 "title": "Linen Shirt",
-                "size": "M",
+                "size":["L"],
                 "color": "White",
                 "original_price": "1200",
                 "selling_price": "850",
@@ -732,7 +691,7 @@ const Productdata = [
             {
                 "id": "13456751-2",
                 "title": "Linen Shirt",
-                "size": "L",
+                "size":["L"],
                 "color": "Sky Blue",
                 "original_price": "1250",
                 "selling_price": "900",
@@ -754,7 +713,7 @@ const Productdata = [
             {
                 "id": "13456752-1",
                 "title": "Maxi Dress",
-                "size": "S",
+                "size":["S"],
                 "color": "Floral Print",
                 "original_price": "2200",
                 "selling_price": "1650",
@@ -764,7 +723,7 @@ const Productdata = [
             {
                 "id": "13456752-2",
                 "title": "Maxi Dress",
-                "size": "M",
+                "size":["L", "XL"],
                 "color": "Solid Red",
                 "original_price": "2300",
                 "selling_price": "1750",
@@ -774,7 +733,7 @@ const Productdata = [
             {
                 "id": "13456752-3",
                 "title": "Maxi Dress",
-                "size": "L",
+                "size": ["L", "XL"],
                 "color": "Navy Blue",
                 "original_price": "2400",
                 "selling_price": "1850",
@@ -796,7 +755,7 @@ const Productdata = [
             {
                 "id": "13456753-1",
                 "title": "Running Shoes",
-                "size": "8",
+                "size":["L", "XL"],
                 "color": "Black/White",
                 "original_price": "3000",
                 "selling_price": "2300",
@@ -806,7 +765,7 @@ const Productdata = [
             {
                 "id": "13456753-2",
                 "title": "Running Shoes",
-                "size": "9",
+                "size": ["L", "XL"],
                 "color": "Blue/Grey",
                 "original_price": "3100",
                 "selling_price": "2400",
@@ -816,7 +775,7 @@ const Productdata = [
             {
                 "id": "13456753-3",
                 "title": "Running Shoes",
-                "size": "10",
+                "size":["L", "XL"],
                 "color": "Red/Black",
                 "original_price": "3200",
                 "selling_price": "2500",
@@ -829,6 +788,8 @@ const Productdata = [
 
 
 
+// Getting all the products data...!
+
 function getData() {
 
     return Productdata;
@@ -836,6 +797,8 @@ function getData() {
 }
 
 
+
+// To display all the products in given id in clothcard by creating element...!
 
 function displayProducts(id, product) {
     let itemWrap = document.getElementById(id);
@@ -930,6 +893,9 @@ function displayProducts(id, product) {
 }
 
 
+
+// It returns products by comparing collections type...! 
+
 function collectionType(type) {
     let data = getData();
     let filterProduct = [];
@@ -952,3 +918,60 @@ function collectionType(type) {
 
 }
 
+
+
+// To search all the products...!
+
+const searchBar = document.querySelector(".search");
+const searchOptions = document.querySelector(".search-options");
+let value = [];
+
+searchBar.addEventListener(`input`, () => {
+    value = [];
+    searchOptions.innerHTML = "";
+
+    if (searchBar.value == "") {
+        searchOptions.innerHTML = "";
+    }
+       let count=0;
+
+        for (let i = 0; i < Productdata.length; i++) {
+
+            if(count>=3){
+                return;
+            }
+                 value.push(searchBar.value);
+            if (searchBar.value.trim() != "" && searchBar.value != null && searchBar.value != undefined && Productdata[i].title.toLowerCase().includes(value[0])) {
+
+                const clothsCart = document.createElement('div');
+                const imageContainer = document.createElement('div');
+                const image = document.createElement('img');
+                const clothsDetail = document.createElement('div');
+                const productsName = document.createElement('h4');
+                const price = document.createElement('h5');
+
+                clothsCart.classList.add("cloths-cart");
+                imageContainer.classList.add("image-container")
+                image.classList.add("image","width-100");
+                clothsDetail.classList.add("cloth-details");
+                productsName.classList.add("name");
+                price.classList.add("font-size")
+
+
+                imageContainer.appendChild(image);
+                clothsDetail.appendChild(productsName);
+                clothsDetail.appendChild(price);
+                clothsCart.appendChild(imageContainer);
+                clothsCart.appendChild(clothsDetail);
+                searchOptions.appendChild(clothsCart);
+
+                image.src = Productdata[i].featured_image;
+                price.innerHTML = "$"+Productdata[i].selling_price;
+                productsName.innerHTML = Productdata[i].title;
+
+                count++;
+
+            }
+
+        }
+})
